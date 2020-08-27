@@ -5,12 +5,12 @@ keywords: WSL, Windows, ядро Linux, подсистема Windows для Linu
 ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bef722f5653380d9f6d104f1a7c116a7599658c9
-ms.sourcegitcommit: ba52d673c123fe8ae61e872a33e218cfc30a1f82
+ms.openlocfilehash: a718c4a880e2c3147900143c24983835d269a4bc
+ms.sourcegitcommit: a5534257c236cefeebe86e6b3fc4be0be8fac24e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86033047"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714827"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>Обновление ядра Linux в WSL 2
 
@@ -43,7 +43,7 @@ ms.locfileid: "86033047"
 ## <a name="troubleshooting"></a>Диагностика
 
 ### <a name="this-update-only-applies-to-machines-with-the-windows-subsystem-for-linux"></a>Это обновление применяется только к компьютерам с подсистемой Windows для Linux.
-Чтобы установить ядро MSI, сначала нужно включить WSL. В случае сбоя отображается следующее сообщение: `This update only applies to machines with the Windows Subsytem for Linux`. 
+Чтобы установить ядро MSI, сначала нужно включить WSL. В случае сбоя отображается следующее сообщение: `This update only applies to machines with the Windows Subsystem for Linux`. 
 
 Есть три возможные причины, по которым вы видите это сообщение:
 
