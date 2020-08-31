@@ -1,16 +1,16 @@
 ---
 title: Установка подсистемы Windows для Linux (WSL) в Windows 10
-description: Инструкции по установке подсистемы Windows для Linux в Windows 10.
+description: Узнайте, как установить подсистему Windows для Linux в Windows 10. Windows 10 необходимо обновить до версии 2004, сборки 19041 или выше.
 keywords: BashOnWindows, bash, wsl, windows, подсистема windows для linux, windowssubsystem, ubuntu, debian, suse, windows 10, установка, включить, WSL2, версия 2
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bab21722e77a0879db70e21003fb237491d99218
-ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
+ms.openlocfilehash: 23c72c0e82c90c23fc0406b56dbf8accad0e39df
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88039445"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866164"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Руководство по установке подсистемы Windows для Linux в Windows 10
 
@@ -30,9 +30,9 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 
 Чтобы выполнить обновление до WSL 2, необходимо выполнить следующие условия:
 
-- Использовать Windows 10 с [обновлением до версии 2004](ms-settings:windowsupdate), **сборкой 19041** или более поздней версии.
+- Использовать Windows 10 с [обновлением до версии 1903 или выше](ms-settings:windowsupdate), **сборкой 18362 или выше**.
 
-- Проверьте версию Windows, нажав **Windows + R**, введите **winver**, выберите **ОК**. (Или введите команду `ver` в командной строке Windows). [Обновите последнюю версию Windows](ms-settings:windowsupdate), если сборка ниже 19041. [Получите помощник по Центру обновления Windows](https://www.microsoft.com/software-download/windows10).
+- Проверьте версию Windows, нажав **Windows + R**, введите **winver**, выберите **ОК**. (Или введите команду `ver` в командной строке Windows). [Обновите последнюю версию Windows](ms-settings:windowsupdate), если сборка ниже 18361. [Получите помощник по Центру обновления Windows](https://www.microsoft.com/software-download/windows10).
 
 ### <a name="enable-the-virtual-machine-platform-optional-component"></a>Включение необязательного компонента "Virtual Machine Platform" (Платформа виртуальной машины)
 
@@ -59,7 +59,7 @@ wsl --set-default-version 2
 > [!NOTE]
 > Обновление с WSL 1 до WSL 2 может занять несколько минут в зависимости от размера целевого дистрибутива. Если вы используете устаревшую установку WSL 1 из Юбилейного обновления Windows 10 или обновления Creators Update, может возникнуть ошибка обновления. Выполните эти инструкции, чтобы [удалить устаревшие дистрибутивы](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro). 
 >
-> Если `wsl --set-default-version` выполняется как недопустимая команда, введите `wsl --help`. Если `--set-default-version` нет в списке, это указывает на отсутствие поддержки в ОС. Вам нужно выполнить обновление до версии 2004, сборка 19041 или более поздней.
+> Если `wsl --set-default-version` выполняется как недопустимая команда, введите `wsl --help`. Если `--set-default-version` нет в списке, это указывает на отсутствие поддержки в ОС. Вам нужно выполнить обновление до версии 1903, сборки 18362 или выше.
 
 ## <a name="install-your-linux-distribution-of-choice"></a>Установка дистрибутива Linux по выбору
 
@@ -96,7 +96,7 @@ wsl --set-default-version 2
 
 ## <a name="set-your-distribution-version-to-wsl-1-or-wsl-2"></a>Установите вашу версию дистрибутива на WSL 1 или WSL 2
 
-Вы можете проверить версию WSL, назначенную каждому из установленных дистрибутивов Linux, открыв командную строку PowerShell и введя команду (доступна только в [сборке Windows 19041](ms-settings:windowsupdate) или более поздней версии): `wsl -l -v`.
+Вы можете проверить версию WSL, назначенную каждому из установленных дистрибутивов Linux, открыв командную строку PowerShell и введя команду (доступна только в [сборке Windows 18362](ms-settings:windowsupdate) или выше): `wsl -l -v`.
 
 ```powershell
 wsl --list --verbose
@@ -135,7 +135,7 @@ wsl --set-default-version 2
   - Убедитесь, что в BIOS вашего компьютера включена виртуализация. Расположение этого параметра зависит от компьютера, но обычно он находится в разделе настроек ЦП в BIOS.
 
 - **При попытке обновления возникает ошибка `Invalid command line option: wsl --set-version Ubuntu 2`.**
-  - Убедитесь, что у вас включена подсистема Windows для Linux и используется сборка Windows 19041 или более поздней версии. Чтобы включить WSL, выполните эту команду в командной строке PowerShell с правами администратора: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`.
+  - Убедитесь, что у вас включена подсистема Windows для Linux и используется сборка Windows 18362 или выше. Чтобы включить WSL, выполните эту команду в командной строке PowerShell с правами администратора: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`.
 
 - **Запрошенную операцию не удалось выполнить из-за ограничения системы виртуального диска. Файлы виртуального жесткого диска должны быть распакованными, незашифрованными и не разреженными.**
   - Снимите флажок Compress contents (Сжимать содержимое) (а также флажок Encrypt contents (Шифровать содержимое), если он установлен), открыв папку профиля для дистрибутива Linux. Он должен находиться в подпапке файловой системы Windows, для примера: `USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited...`.
