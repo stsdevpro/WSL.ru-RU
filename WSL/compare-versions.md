@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubunt
 ms.date: 07/22/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 15f1528332345f0bea829b9606372ed7346e6dff
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 930fbdc0b86396f41fbb1189f4a651bb03e05f22
+ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866028"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427181"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Сравнение WSL 1 и WSL 2
 
@@ -33,7 +33,7 @@ WSL 2 использует последнюю и самую новую техн
 
 Уже используете WSL 1 и хотите выполнить обновление до WSL 2? Следуйте инструкциям, чтобы выполнить [обновление до WSL 2](./install-win10.md#update-to-wsl-2)!
 
-Подсистема WSL 2 доступна только в Windows 10 версии 2004, сборки 19041 или выше. Проверьте версию Windows, нажав **Windows + R**, введите **winver**, выберите **ОК**. (Или введите команду `ver` в командной строке Windows). Может потребоваться [выполнить обновление до последней версии Windows](ms-settings:windowsupdate). Для сборок ниже 19041 WSL не поддерживается.
+Подсистема WSL 2 доступна только в Windows 10 версии 1903, сборки 18362 или выше. Проверьте версию Windows, нажав **Windows + R**, введите **winver**, выберите **ОК**. (Или введите команду `ver` в командной строке Windows). Может потребоваться [выполнить обновление до последней версии Windows](ms-settings:windowsupdate). Для сборок ниже 18362 WSL не поддерживается.
 
 > [!NOTE]
 > WSL 2 будет работать с [VMWare 15.5.5+](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) и [VirtualBox 6+](https://www.virtualbox.org/wiki/Changelog-6.0).

@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 84aecf4f6111cca47ece3c2421be659fb5a27771
-ms.sourcegitcommit: a5534257c236cefeebe86e6b3fc4be0be8fac24e
+ms.openlocfilehash: 2335db4daf8b9c5c67ad04a1fc94339b6c01e546
+ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714852"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427201"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Устранение неполадок подсистемы Windows для Linux
 
@@ -39,6 +39,12 @@ ms.locfileid: "88714852"
 Наконец, если ваша проблема связана с терминалом Windows, консолью Windows или интерфейсом командной строки, используйте репозиторий терминалов Windows: https://github.com/microsoft/terminal
 
 ## <a name="common-issues"></a>Распространенные проблемы
+
+### <a name="im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2"></a>Я использую Windows 10 версии 1903, но не вижу параметры для WSL 2. 
+
+Скорее всего, это связано с тем, что на компьютере еще не установлены исправления для WSL 2. Чтобы решить эту проблему самым простым способом, перейдите в параметры Windows, нажмите кнопку "Проверить наличие обновлений" и установите последние обновления в системе. Полные инструкции по получению исправления для старой версии см. [здесь](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it). 
+
+Если после нажатия кнопки "Проверить наличие обновлений" вы не получили обновление, можно установить исправления KB4566116 вручную, используя [следующую ссылку](http://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116).  
 
 ### <a name="error-0x1bc-when-wsl---set-default-version-2"></a>Ошибка. 0x1bc, когда `wsl --set-default-version 2`
 Это может произойти, если язык интерфейса или язык системы не является английским.

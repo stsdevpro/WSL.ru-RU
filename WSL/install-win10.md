@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, подсистема windows для
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 14e1697d1f2ac7a1efa17368be830a5c22973bc6
-ms.sourcegitcommit: 910845e9b3f980b2c5b9b4968331a706720603c6
+ms.openlocfilehash: 50b434e288ba90173875cf5e7cd5fe9e6c3d8a16
+ms.sourcegitcommit: 498592fa4b09015be3ee9a8913e5e3cf755de24b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89058499"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89559294"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Руководство по установке подсистемы Windows для Linux в Windows 10
 
@@ -31,6 +31,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 Чтобы выполнить обновление до WSL 2, необходимо выполнить следующие условия:
 
 - Использовать Windows 10 с [обновлением до версии 1903 или выше](ms-settings:windowsupdate), **сборкой 18362** или выше для систем x64.
+   - Если вы работаете с Windows 10 версии 1903 или 1909, убедитесь, что используете номер сборки 1049 или выше. Полные инструкции по устранению неполадок см. [здесь](https://docs.microsoft.com/windows/wsl/troubleshooting#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2).
 - Использовать Windows 10 с обновлением до версии 2004 или выше и **сборкой 19041** или выше для систем ARM64.
 - Обратите внимание, что, если вы работаете с Windows 10 версии 1903 или 1909, необходимо убедиться, что используется надлежащее обновление. Инструкции можно [найти здесь](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it). 
 
@@ -141,7 +142,7 @@ wsl --set-default-version 2
 
 - **Запрошенную операцию не удалось выполнить из-за ограничения системы виртуального диска. Файлы виртуального жесткого диска должны быть распакованными, незашифрованными и не разреженными.**
   - Снимите флажок Compress contents (Сжимать содержимое) (а также флажок Encrypt contents (Шифровать содержимое), если он установлен), открыв папку профиля для дистрибутива Linux. Он должен находиться в подпапке файловой системы Windows, для примера: `USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited...`.
-  - В этом профиле дистрибутива Linux должна находиться папка LocalState. Щелкните эту папку правой кнопкой мыши, чтобы отобразить меню параметров. Выберите Properties (Свойства) > Advanced (Дополнительно) и убедитесь, что флажки Compress contents to save disk space (Сжимать содержимое для экономии места на диске) и Encrypt contents to secure data (Шифровать содержимое для защиты данных) не установлены. Если вы увидите запрос на применение параметров к текущей папке или ко всем вложенным папкам и файлам, выберите вариант только для текущей папки, так как вы очищаете только флаг сжатия. После этого команда `wsl –set-version` будет работать правильно.
+  - В этом профиле дистрибутива Linux должна находиться папка LocalState. Щелкните эту папку правой кнопкой мыши, чтобы отобразить меню параметров. Выберите Properties (Свойства) > Advanced (Дополнительно) и убедитесь, что флажки Compress contents to save disk space (Сжимать содержимое для экономии места на диске) и Encrypt contents to secure data (Шифровать содержимое для защиты данных) не установлены. Если вы увидите запрос на применение параметров к текущей папке или ко всем вложенным папкам и файлам, выберите вариант только для текущей папки, так как вы очищаете только флаг сжатия. После этого команда `wsl --set-version` будет работать правильно.
 
 ![Снимок экрана с параметрами свойств дистрибутива WSL](media/troubleshooting-virtualdisk-compress.png)
 

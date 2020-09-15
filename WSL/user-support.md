@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, подсистема windows для
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 551cc66b1648a66717163d1d8e19a78d28bff342
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: cdb510b8195f18f89ea475889c34850234b7c0e8
+ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235911"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427191"
 ---
 # <a name="create-a-user-account-and-password-for-your-new-linux-distribution"></a>Создание учетной записи пользователя и пароля для нового дистрибутива Linux
 
@@ -50,7 +50,7 @@ Windows не выполняет автоматическую установку 
 
     > Если вам нужно обновить забытый пароль в дистрибутиве, который не используется по умолчанию, используйте команду `wsl -d Debian -u root`, заменив `Debian` именем целевого дистрибутива.
 
-2. Открыв дистрибутив WSL на корневом уровне в PowerShell, вы можете использовать для обновления пароля команду `passwd`.
+2. Открыв дистрибутив WSL на корневом уровне в PowerShell, вы можете использовать для обновления пароля команду `passwd <WSLUsername>`, где `<WSLUsername>` — это имя пользователя для учетной записи в дистрибутиве, пароль к которой вы забыли.
 
 3. Вам будет предложено ввести новый пароль UNIX, а затем подтвердить его. Когда пароль будет обновлен, закройте WSL в PowerShell, выполнив команду `exit`.
 
