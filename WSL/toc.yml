@@ -24,6 +24,8 @@
       href: tutorials/wsl-git.md
     - name: Приступая к работе с базами данных
       href: tutorials/wsl-database.md
+    - name: Начало работы с удаленными контейнерами Docker
+      href: tutorials/wsl-containers.md
     - name: "Настройка ускорения с помощью GPU (NVIDIA CUDA\_/ DirectML)"
       href: tutorials/gpu-compute.md
 - name: Практическое руководство
