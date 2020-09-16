@@ -40,6 +40,8 @@
       href: enterprise.md
     - name: Создание пользовательского дистрибутива
       href: build-custom-distro.md
+    - name: "Подключение диска в WSL\_2 (предварительная версия)"
+      href: wsl2-mount-disk.md
     - name: Справочник по командной строке
       href: reference.md
 - name: Вопросы и ответы
