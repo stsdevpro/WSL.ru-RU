@@ -4,8 +4,6 @@
   items:
     - name: О WSL
       href: about.md
-    - name: "Новые возможности WSL\_2"
-      href: wsl2-index.md
     - name: "Сравнение WSL\_2 и WSL\_1"
       href: compare-versions.md
 - name: Краткое руководство
