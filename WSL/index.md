@@ -3,29 +3,33 @@ title: Общие сведения о подсистеме Windows для Linux
 description: Изучите документацию по подсистеме Windows для Linux.
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux
 ms.topic: article
+ms.date: 09/15/2020
 ms.localizationpriority: high
-ms.openlocfilehash: 81ff05f03172e3e3a167ffba4ce846ec2edb3d1c
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: e8046e4ec95e599014c5e5c09a24e7fac44da43d
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948588"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719163"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Документация по подсистеме Windows для Linux
 
 Подсистема Windows для Linux позволяет разработчикам запускать среду GNU/Linux с большинством программ командной строки, служебных программ и приложений непосредственно в Windows без каких-либо изменений и необходимости использовать традиционную виртуальную машину или двойную загрузку.
 
-## <a name="learn-more-here"></a>Дополнительные сведения
+> [!div class="nextstepaction"]
+> [Установка WSL](install-win10.md)
+
+## <a name="learn-more"></a>Подробнее
 
 * [О подсистеме Windows для Linux](about.md)
-* [Новые возможности WSL 2](wsl2-index.md)
+* [Новые возможности WSL 2](compare-versions.md#whats-new-in-wsl-2)
 * [Сравнение WSL 2 и WSL 1](compare-versions.md)
 * [Часто задаваемые вопросы](faq.md)
 
 ## <a name="get-started"></a>Приступая к работе
 
 * [Установка WSL 1](install-win10.md)
-* [Обновление до WSL 2](install-win10.md#update-to-wsl-2)
+* [Обновление до WSL 2](install-win10.md#step-2---update-to-wsl-2)
 * [Установка Linux на Windows Server](install-on-server.md)
 * [Создание учетной записи пользователя и пароля для нового дистрибутива Linux](user-support.md)
 

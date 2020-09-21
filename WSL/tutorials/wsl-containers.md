@@ -5,12 +5,12 @@ keywords: WSL, Windows, виндовссубсистем, Windows 10, Docker, к
 ms.date: 08/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a972cd6f179059e0841e1aef4bc3929fa46fcc4d
-ms.sourcegitcommit: 1c7f2e9928672ad3941a9327162595cb73ef5a3f
+ms.openlocfilehash: 2ae9da815335f99a9b4a75334a02d2730ddd08c6
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609726"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818756"
 ---
 # <a name="get-started-with-docker-remote-containers-on-wsl-2"></a>Начало работы с удаленными контейнерами DOCKER в WSL 2
 
@@ -127,7 +127,7 @@ DOCKER — это средство, используемое для создан
 
     ![VS Code запустить конфигурацию отладки](../media/vscode-run-config.png)
 
-10. В VS Code выберите **запустить**  >  **отладку запуска** (или просто нажмите клавишу **F5** ). При этом откроется окно терминала в VS Code. результат должен выглядеть следующим образом: "Запуск сервера разработки при http://127.0.0.1:8000/ выходе из системы на сервере с помощью Control-C". Удерживайте клавишу CTRL и выберите отображаемый адрес, чтобы открыть приложение в веб-браузере по умолчанию и увидеть, что проект работает в контейнере.
+10. В VS Code выберите **запустить**  >  **отладку запуска** (или просто нажмите клавишу **F5** ). При этом откроется окно терминала в VS Code. результат должен выглядеть следующим образом: "Запуск сервера разработки при http://127.0.0.1:8000/ выходе из системы на сервере с помощью Control-C". Удерживайте нажатой клавишу CTRL и выберите отображаемый адрес, чтобы открыть приложение в веб-браузере по умолчанию и просмотреть проект, работающий в контейнере.
 
     ![VS Code Запуск контейнера DOCKER](../media/vscode-running-in-container.png)
 
