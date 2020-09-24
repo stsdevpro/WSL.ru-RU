@@ -2,15 +2,15 @@
 title: Справочные материалы по командам подсистемы Windows для Linux
 description: См. список команд, управляющих подсистемой Windows для Linux, включая аргументы для выполнения команд Linux.
 keywords: BashOnWindows, bash, wsl, windows, подсистема windows для linux, windowssubsystem, ubuntu
-ms.date: 07/31/2017
+ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: fc5c9e06c597092a3790ba7f9eb06054a33450c1
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 6f98cb7b238e4b38c1a931a0e77e419efbcc319d
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866131"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719173"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>Справочные материалы по командам подсистемы Windows для Linux
 
@@ -169,7 +169,7 @@ wsl --set-default-version 2
 
 Команда `lxrun.exe` была первой командой, используемой для установки подсистемы Windows для Linux и управления ею. Она считается нерекомендуемой в Windows 10 версии 1803 и более поздних версиях.
 
-С помощью команды `lxrun.exe` можно взаимодействовать с [подсистемой Windows для Linux (WSL)](https://msdn.microsoft.com/commandline/wsl/faq#what-windows-subsystem-for-linux-wsl-) напрямую.  Эти команды устанавливаются в каталог `\Windows\System32` и могут выполняться в командной строке Windows или PowerShell.
+С помощью команды `lxrun.exe` можно взаимодействовать с подсистемой Windows для Linux (WSL) напрямую.  Эти команды устанавливаются в каталог `\Windows\System32` и могут выполняться в командной строке Windows или PowerShell.
 
 | Команда                     | Описание                     |
 |:----------------------------|:---------------------------|

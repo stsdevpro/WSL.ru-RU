@@ -2,15 +2,15 @@
 title: Скачивание дистрибутивов подсистемы Windows для Linux (WSL) вручную
 description: Инструкции по скачиванию дистрибутивов подсистемы Windows для Linux вручную.
 keywords: wsl, подсистема windows для linux, установка вручную, microsoft store, windows 10s, curl, add-appxpackage, long-term servicing, ltsc
-ms.date: 05/28/2020
+ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d948ce9d304314bdd15b98136b8a99ca35723139
-ms.sourcegitcommit: e67eb4aedff57a304188ca3360aba25605f8bdb1
+ms.openlocfilehash: 04b991d1019f2187a01189695e4078f4d8a8ba1f
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746280"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719143"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Скачивание пакетов дистрибутива подсистемы Windows для Linux вручную
 
@@ -40,7 +40,7 @@ ms.locfileid: "84746280"
 При желании вы также можете скачать предпочтительные дистрибутивы с помощью командной строки.
 
  ### <a name="download-using-powershell"></a>Скачивание с помощью PowerShell
- Чтобы скачать дистрибутивы с помощью PowerShell, используйте командлет [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1). Ниже приведены инструкции по скачиванию Ubuntu 16.04.
+ Чтобы скачать дистрибутивы с помощью PowerShell, используйте командлет [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest). Ниже приведены инструкции по скачиванию Ubuntu 16.04.
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
@@ -56,7 +56,7 @@ Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseB
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-В приведенном выше примере выполняется `curl.exe` (а не только `curl`), чтобы убедиться, что в PowerShell вызывается реальный исполняемый файл cURL, а не его псевдоним для [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6).
+В приведенном выше примере выполняется `curl.exe` (а не только `curl`), чтобы убедиться, что в PowerShell вызывается реальный исполняемый файл cURL, а не его псевдоним для [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest).
 
 > Примечание. Использование `curl` может быть предпочтительным, если необходимо вызвать или создать сценарий для скачивания с помощью командлетов командной строки и сценариев `.bat` / `.cmd`.
 
@@ -68,4 +68,4 @@ Add-AppxPackage .\app_name.appx
 
 Если вы используете сервер Windows, инструкции по установке можно найти на странице документации [Windows Server](install-on-server.md).
 
-После установки дистрибутива следуйте обычным инструкциям по [обновлению до WSL 2](./install-win10.md#update-to-wsl-2) или [создайте новую учетную запись пользователя и пароль](./user-support.md).
+После установки дистрибутива следуйте обычным инструкциям по [обновлению до WSL 2](./install-win10.md#step-2---update-to-wsl-2) или [создайте новую учетную запись пользователя и пароль](./user-support.md).
