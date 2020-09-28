@@ -6,20 +6,30 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 57d06a8666f8003b187f043bd18655a9287d8a63
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: f79acbbc7f6436bae54c5160e769cababa76a341
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866105"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818696"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Заметки о выпуске подсистемы Windows для Linux
+
+## <a name="build-20211"></a>Сборка 20211
+Общие сведения о сборке Windows 20211 доступны в [блоге о Windows](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20211/).
+
+* Представлена новая команда `wsl.exe --mount` для подключения физических или виртуальных дисков. Дополнительные сведения см. в статье [Доступ к файловым системам Linux в Windows и WSL 2](https://devblogs.microsoft.com/commandline/access-linux-filesystems-in-windows-and-wsl-2/).
+* Устранен сбой в службе LxssManager при проверке активности виртуальной машины. [GH 5768]
+* Включена поддержка сжатых VHD-файлов. [GH 4103]
+* Убедитесь, что библиотеки пользовательского режима Linux, установленные в c:\windows\system32\lxss\lib, сохраняются при обновлении ОС. [GH 5848]
+* Включена возможность получить список дистрибутивов, доступных для установки, с помощью команды `wsl --install --list-distributions`.
+* Теперь, когда пользователь выходит из системы, работа экземпляров WSL завершается.
 
 ## <a name="build-20190"></a>Сборка 20190
 Общие сведения о сборке Windows 20190 доступны в [блоге о Windows](https://blogs.windows.com/windowsexperience/2020/08/12/announcing-windows-10-insider-preview-build-20190/).
 
-* Исправлена ошибка, препятствующая запуску экземпляров WSL1 [GH 5633].
-* Исправлена ошибка с зависанием при перенаправлении выходных данных процесса Windows [GH 5648].
+* Исправлена ошибка, препятствующая запуску экземпляров WSL 1. [GH 5633]
+* Исправлена ошибка, приводившая к зависанию при перенаправлении выходных данных процесса Windows. [GH 5648]
 * Добавлен параметр %userprofile%\\.wslconfig для управления временем ожидания при простое виртуальной машины (wsl2.vmIdleTimeout=<время_в_миллисекундах>).
 * Включена поддержка запуска псевдонимов выполнения приложений из WSL.
 * Включена поддержка установки ядра WSL2 и дистрибутивов с помощью команды wsl.exe --install.

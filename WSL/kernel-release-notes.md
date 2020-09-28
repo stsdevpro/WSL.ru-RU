@@ -5,19 +5,19 @@ keywords: заметки о выпуске, wsl, windows, подсистема w
 ms.date: 06/09/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 32b65bcde3df01b25f0361493a172e754e78e101
-ms.sourcegitcommit: 43d4056eefe0c71ecd9a0fbd5a7a58dd18fa9829
+ms.openlocfilehash: eb93135355384013b93b4b5c4af03a582280febf
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89615551"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719123"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux-kernel"></a>Заметки о выпуске подсистемы Windows для ядра Linux
 
 Включена поддержка дистрибутивов WSL 2, [использующих полнофункциональное ядро Linux](https://devblogs.microsoft.com/commandline/shipping-a-linux-kernel-with-windows/). Это ядро Linux имеет открытый кодом. Исходный код доступен в репозитории [WSL2-Linux-Kernel](https://github.com/microsoft/WSL2-Linux-Kernel). Это ядро Linux доставляется на компьютер через Центр обновления Майкрософт в соответствии с отдельным графиком выпуска подсистемы Windows для Linux (поставляется в составе образа Windows).
 
 ## <a name="419128-microsoft-standard"></a>4.19.128-microsoft-standard
-*Дата выпуска:* предварительный выпуск и версии, доступные для установки вручную.
+*Дата выпуска:* 15.09.2020
 
 [Официальная ссылка на выпуск GitHub.](https://github.com/microsoft/WSL2-Linux-Kernel/releases/tag/4.19.128-microsoft-standard)
 

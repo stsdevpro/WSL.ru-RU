@@ -5,16 +5,16 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 2335db4daf8b9c5c67ad04a1fc94339b6c01e546
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.openlocfilehash: 83c73e99afd4745081290340a67edee3ec26dc60
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427201"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818716"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Устранение неполадок подсистемы Windows для Linux
 
-Для получения поддержки по вопросам, связанным с WSL, см. наш репозиторий GitHub:
+Для получения поддержки по вопросам, связанным с WSL, см. наш репозиторий GitHub: https://github.com/Microsoft/wsl/issues
 
 ## <a name="search-for-any-existing-issues-related-to-your-problem"></a>Поиск описанных проблем, связанных с вашей проблемой
 
@@ -44,7 +44,7 @@ ms.locfileid: "89427201"
 
 Скорее всего, это связано с тем, что на компьютере еще не установлены исправления для WSL 2. Чтобы решить эту проблему самым простым способом, перейдите в параметры Windows, нажмите кнопку "Проверить наличие обновлений" и установите последние обновления в системе. Полные инструкции по получению исправления для старой версии см. [здесь](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it). 
 
-Если после нажатия кнопки "Проверить наличие обновлений" вы не получили обновление, можно установить исправления KB4566116 вручную, используя [следующую ссылку](http://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116).  
+Если после нажатия кнопки "Проверить наличие обновлений" вы не получили обновление, можно установить исправления KB4566116 вручную, используя [следующую ссылку](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116).  
 
 ### <a name="error-0x1bc-when-wsl---set-default-version-2"></a>Ошибка. 0x1bc, когда `wsl --set-default-version 2`
 Это может произойти, если язык интерфейса или язык системы не является английским.

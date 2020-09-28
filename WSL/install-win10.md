@@ -1,20 +1,24 @@
 ---
 title: Установка подсистемы Windows для Linux (WSL) в Windows 10
-description: Узнайте, как установить подсистему Windows для Linux в Windows 10. Windows 10 необходимо обновить до версии 2004, сборки 19041 или выше.
+description: Узнайте, как установить дистрибутивы Linux (включая Ubuntu, Debian, SUSE, Kali, Fedora, Pengwin и Alpine) на компьютере под управлением Windows 10 с помощью терминала Bash.
 keywords: BashOnWindows, bash, wsl, windows, подсистема windows для linux, windowssubsystem, ubuntu, debian, suse, windows 10, установка, включить, WSL2, версия 2
-ms.date: 05/12/2020
+ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 50b434e288ba90173875cf5e7cd5fe9e6c3d8a16
-ms.sourcegitcommit: 498592fa4b09015be3ee9a8913e5e3cf755de24b
+ms.openlocfilehash: f617f006ae8067da8adbe1449bfcfe5bf32e73a3
+ms.sourcegitcommit: 1232d3b3becc4ceaa113f8ffb0b935c5550f99a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89559294"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90777655"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Руководство по установке подсистемы Windows для Linux в Windows 10
 
-## <a name="install-the-windows-subsystem-for-linux"></a>Установка подсистемы Windows для Linux
+## <a name="install-windows-subsystem-for-linux"></a>Установка подсистемы Windows для Linux
+
+Существует две версии подсистемы Windows для Linux (WSL), которые можно выбрать при установке. WSL 2 обеспечивает более высокую общую производительность. Мы рекомендуем использовать ее. Если ваша система не поддерживает WSL 2 или у вас особый случай, когда требуется использовать межсистемное хранилище файлов, возможно, вы захотите выбрать WSL 1. Узнайте больше о [сравнении WSL 2 и WSL 1](./compare-versions.md).
+
+## <a name="step-1---enable-the-windows-subsystem-for-linux"></a>Шаг 1. Включение подсистемы Windows для Linux
 
 Перед установкой дистрибутивов Linux в Windows необходимо включить дополнительный компонент "Подсистема Windows для Linux".
 
@@ -24,22 +28,26 @@ ms.locfileid: "89559294"
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-Чтобы установить только WSL 1, необходимо перезагрузить компьютер и перейти к пункту [Install your Linux distribution of choice](./install-win10.md#install-your-linux-distribution-of-choice) (Установить дистрибутив Linux), в противном случае дождитесь перезапуска и переходите к обновлению до WSL 2. Узнайте больше о [сравнении WSL 2 и WSL 1](./compare-versions.md).
+Теперь перейдите к шагу 2 и выполните обновление до WSL 2. Если вы хотите установить только WSL 1, вы можете перезагрузить компьютер и перейти к разделу [Шаг 6. Установка дистрибутива Linux по выбору](./install-win10.md#step-6---install-your-linux-distribution-of-choice). Чтобы выполнить обновление до WSL 2, дождитесь перезагрузки компьютера и перейдите к следующему шагу.
 
-## <a name="update-to-wsl-2"></a>Обновление до WSL 2
+## <a name="step-2---update-to-wsl-2"></a>Шаг 2. Обновление до WSL 2
 
-Чтобы выполнить обновление до WSL 2, необходимо выполнить следующие условия:
+Для обновления до WSL 2 требуется Windows 10.
 
-- Использовать Windows 10 с [обновлением до версии 1903 или выше](ms-settings:windowsupdate), **сборкой 18362** или выше для систем x64.
-   - Если вы работаете с Windows 10 версии 1903 или 1909, убедитесь, что используете номер сборки 1049 или выше. Полные инструкции по устранению неполадок см. [здесь](https://docs.microsoft.com/windows/wsl/troubleshooting#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2).
-- Использовать Windows 10 с обновлением до версии 2004 или выше и **сборкой 19041** или выше для систем ARM64.
-- Обратите внимание, что, если вы работаете с Windows 10 версии 1903 или 1909, необходимо убедиться, что используется надлежащее обновление. Инструкции можно [найти здесь](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it). 
+### <a name="requirements"></a>Требования
 
-- Проверьте версию Windows, нажав **Windows + R**, введите **winver**, выберите **ОК**. (Или введите команду `ver` в командной строке Windows). [Обновите последнюю версию Windows](ms-settings:windowsupdate), если сборка ниже 18361. [Получите помощник по Центру обновления Windows](https://www.microsoft.com/software-download/windows10).
+- Для 64-разрядных систем: **версия 1903** или более поздняя со **сборкой 18362** или более поздней версии.
+- Для систем ARM64: **версия 2004** или более поздняя со **сборкой 19041** или более поздней версии.
+- Сборки ниже 18362 не поддерживают WSL 2. Для обновления версии Windows используйте [помощник по обновлению Windows](https://www.microsoft.com/software-download/windows10).
 
-### <a name="enable-the-virtual-machine-platform-optional-component"></a>Включение необязательного компонента "Virtual Machine Platform" (Платформа виртуальной машины)
+Чтобы проверить версию и номер сборки, нажмите клавиши **Windows+R**, введите **winver** и нажмите кнопку **ОК**. (Или введите команду `ver` в командной строке Windows). В меню "Параметры" [выполните обновление до последней версии Windows](ms-settings:windowsupdate).
 
-Перед установкой WSL 2 необходимо включить необязательный компонент "Virtual Machine Platform" (Платформа виртуальных машин).
+> [!NOTE]
+> Если вы используете Windows 10 версии 1903 или 1909, в меню Windows откройте меню "Параметры", перейдите к разделу "Обновления и безопасность" и выберите "Проверить наличие обновлений". Номер сборки должен быть 18362.1049 и выше или 18363.1049 и выше с номером дополнительной сборки не ниже 1049. Подробнее: [поддержка WSL 2 вскоре будет реализована в Windows 10 версий 1903 и 1909](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/). См. [инструкции по устранению неполадок](https://docs.microsoft.com/windows/wsl/troubleshooting#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2).
+
+## <a name="step-3---enable-virtual-machine-feature"></a>Шаг 3. Включение компонента виртуальных машин
+
+Перед установкой WSL 2 необходимо включить необязательный компонент **Платформа виртуальных машин**.
 
 Запустите PowerShell с правами администратора и выполните следующую команду.
 
@@ -49,7 +57,22 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 **Перезапустите** компьютер, чтобы завершить установку и обновление WSL до WSL 2.
 
-### <a name="set-wsl-2-as-your-default-version"></a>Задать WSL 2 в качестве версии по умолчанию
+## <a name="step-4---download-the-linux-kernel-update-package"></a>Шаг 4. Скачивание пакета обновления ядра Linux
+
+1. Скачайте пакет последней версии:
+    - [Пакет обновления ядра Linux в WSL 2 для 64-разрядных компьютеров.](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+
+    > [!NOTE]
+    > Если вы используете компьютер ARM64, вместо этого скачайте [пакет ARM64](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi). Если вы не знаете, какой тип компьютера используете, откройте командную строку или PowerShell и введите `systeminfo | find "System Type"`.
+
+2. Запустите пакет обновления, скачанный на предыдущем этапе. (Для запуска щелкните дважды. Появится запрос на повышение уровня разрешений. Нажмите кнопку "Да", чтобы утвердить эту установку.)
+
+Когда установка завершится, перейдите к следующему шагу — выбору WSL 2 в качестве версии по умолчанию при установке новых дистрибутивов Linux. (Пропустите этот шаг, если вы хотите, чтобы новые дистрибутивы Linux были установлены в WSL 1).
+
+> [!NOTE]
+> Дополнительные сведения см. в статье об [изменениях процесса установки обновления ядра Linux в WSL 2](https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004), доступной в блоге, [посвященному командной строке Windows](https://aka.ms/cliblog).
+
+## <a name="step-5---set-wsl-2-as-your-default-version"></a>Шаг 5. Выбор WSL 2 в качестве версии по умолчанию
 
 Откройте PowerShell от имени администратора и выполните следующую команду, чтобы задать WSL 2 в качестве версии по умолчанию при установке нового дистрибутива Linux:
 
@@ -57,14 +80,14 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 wsl --set-default-version 2
 ```
 
-После выполнения этой команды может появиться следующее сообщение: `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`. Перейдите по ссылке ([https://aka.ms/wsl2kernel](https://aka.ms/wsl2kernel)) и установите MSI-файл с этой страницы документации, чтобы установить на компьютере ядро Linux для WSL 2. После установки ядра выполните команду еще раз. Она должна успешно завершиться без отображения сообщения. 
-
 > [!NOTE]
-> Обновление с WSL 1 до WSL 2 может занять несколько минут в зависимости от размера целевого дистрибутива. Если вы используете устаревшую установку WSL 1 из Юбилейного обновления Windows 10 или обновления Creators Update, может возникнуть ошибка обновления. Выполните эти инструкции, чтобы [удалить устаревшие дистрибутивы](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro). 
+> Обновление с WSL 1 до WSL 2 может занять несколько минут в зависимости от размера целевого дистрибутива. Если вы используете устаревшую установку WSL 1 из Юбилейного обновления Windows 10 или обновления Creators Update, может возникнуть ошибка обновления. Выполните эти инструкции, чтобы [удалить устаревшие дистрибутивы](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro).
 >
 > Если `wsl --set-default-version` выполняется как недопустимая команда, введите `wsl --help`. Если `--set-default-version` нет в списке, это указывает на отсутствие поддержки в ОС. Вам нужно выполнить обновление до версии 1903, сборки 18362 или выше.
+>
+> После выполнения команды может появиться следующее сообщение: `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`. Это значит, что вам по-прежнему нужно установить пакет обновления MSI для ядра Linux.
 
-## <a name="install-your-linux-distribution-of-choice"></a>Установка дистрибутива Linux по выбору
+## <a name="step-6---install-your-linux-distribution-of-choice"></a>Шаг 6. Установка дистрибутива Linux по выбору
 
 1. Откройте [Microsoft Store](https://aka.ms/wslstore) и выберите предпочтительный дистрибутив Linux.
 
@@ -89,13 +112,23 @@ wsl --set-default-version 2
 
     ![Дистрибутивы Linux в Microsoft Store](media/UbuntuStore.png)
 
-## <a name="set-up-a-new-distribution"></a>Настройка нового дистрибутива
+## <a name="step-7---set-up-a-new-distribution"></a>Шаг 7. Настройка нового дистрибутива
 
 При первом запуске недавно установленного дистрибутива Linux откроется окно консоли, и вам будет предложено подождать минуту или две, чтобы файлы распаковались и сохранились на компьютере. Все будущие запуски должны занимать меньше секунды.
 
 Затем необходимо будет [создать учетную запись пользователя и пароль для нового дистрибутива Linux](./user-support.md).
 
 ![Распаковка Ubuntu в консоли Windows](media/UbuntuInstall.png)
+
+**Поздравляем! Вы успешно установили и настроили дистрибутив Linux, который полностью интегрирован с операционной системой Windows.**
+
+## <a name="install-windows-terminal-optional"></a>Установка Терминала Windows (необязательно)
+
+В Терминале Windows можно использовать несколько вкладок (чтобы быстро переходить между несколькими командными строками Linux, командной строкой Windows, PowerShell, Azure CLI и пр.), создавать пользовательские сочетания клавиш (для открытия и закрытия вкладок, копирования и вставки и пр.), а также применять функцию поиска и пользовательские темы (цветовые схемы, стили и размеры шрифтов, а также фоновое изображение, размытие и прозрачность). [Подробнее.](https://docs.microsoft.com/windows/terminal)
+
+[Установка Терминала Windows](https://docs.microsoft.com/windows/terminal/get-started)
+
+  ![Терминал Windows](media/terminal.png)
 
 ## <a name="set-your-distribution-version-to-wsl-1-or-wsl-2"></a>Установите вашу версию дистрибутива на WSL 1 или WSL 2
 
@@ -152,4 +185,17 @@ wsl --set-default-version 2
 > Чтобы получать обновленные сведения, проверьте [ветку № 4103 в документации GitHub WSL](https://github.com/microsoft/WSL/issues/4103), где отслеживается эта проблема.
 
 - **Термин WSL не распознан как имя командлета, функции, файла скрипта или действующей программы.**
-  - Убедитесь, что установлен дополнительный компонент [Подсистема Windows для Linux](./install-win10.md#enable-the-virtual-machine-platform-optional-component). Кроме того, эта ошибка возникнет, если вы используете устройство ARM64 и выполняете эту команду в PowerShell. Вместо этого запустите `wsl.exe` из [PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6) или командной строки.
+  - Убедитесь, что установлен дополнительный компонент [Подсистема Windows для Linux](./install-win10.md#step-3---enable-virtual-machine-feature). Кроме того, эта ошибка возникнет, если вы используете устройство ARM64 и выполняете эту команду в PowerShell. Вместо этого запустите `wsl.exe` из [PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows) или командной строки.
+
+- **Error: This update only applies to machines with the Windows Subsystem for Linux** (Ошибка. Это обновление применяется только к компьютерам с подсистемой Windows для Linux).
+  - Чтобы установить пакет обновления MSI для ядра Linux, нужно сначала включить WSL. В случае сбоя отображается следующее сообщение: `This update only applies to machines with the Windows Subsystem for Linux`.
+  - Есть три возможные причины, по которым вы видите это сообщение:
+
+  1. Вы используете старую версию Windows, которая не поддерживает WSL 2. Требования к версиям и ссылки пакеты обновления см. на шаге 2.
+
+  2. Компонент WSL не включен. Необходимо вернуться к шагу 1 и убедиться, что на компьютере включен необязательный компонент WSL.
+
+  3. Когда он будет включен, перезагрузите компьютер, чтобы изменения вступили в силу, и повторите попытку.
+
+- **Error: WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel .** (Ошибка. Для WSL 2 требуется обновление компонента ядра. Дополнительные сведения см. здесь: https://aka.ms/wsl2kernel ).
+  - Эта ошибка возникает, если пакет ядра Linux отсутствует в папке %SystemRoot%\system32\lxss\tools. Чтобы устранить ошибку, установите пакет обновления MSI для ядра Linux, как описано на шаге 4 в этих инструкциях по установке. Возможно, вам потребуется удалить пакет MSI в разделе [Установка и удаление программ](ms-settings:appsfeatures-app), а затем снова установить его.
