@@ -5,12 +5,12 @@ keywords: WSL, Windows, виндовссубсистем, GNU, Linux, bash, Git,
 ms.date: 06/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c48234be5c3867d771363aaa5e630d8ebe378364
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.openlocfilehash: 2d05e83d4c87b1b03028856bcec9d5205205535a
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427221"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413355"
 ---
 # <a name="get-started-using-git-on-windows-subsystem-for-linux"></a>Приступая к работе с Git в подсистеме Windows для Linux
 
@@ -40,7 +40,7 @@ Git уже установлен с большей частью подсисте�
 
 Сведения об установке Git см. на сайте [скачивания Git для Linux](https://git-scm.com/download/linux) . Каждый дистрибутив Linux имеет собственный диспетчер пакетов и команду install.
 
-Для получения последней стабильной версии GIt в Ubuntu/Debian введите команду:
+Для получения последней стабильной версии Git в Ubuntu/Debian введите команду:
 
 ```bash
 sudo apt-get install git

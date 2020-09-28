@@ -6,12 +6,12 @@ ms.date: 07/21/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.localizationpriority: high
-ms.openlocfilehash: 2b79473f620c39084bc9b7a385d4e16e3fe34d77
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 0c6fa3d0c5483a7ffd1fb95f13ca62666a7c1e72
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818676"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413085"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>Что такое подсистема Windows для Linux
 
@@ -23,7 +23,7 @@ ms.locfileid: "90818676"
 * Запускайте средства командной строки, например `grep`, `sed`, `awk`, или другие двоичные файлы ELF-64.
 * Запускайте сценарии Bash Shell и приложения командной строки GNU/Linux, включая:  
     * инструменты: vim, emacs, tmux;
-    * языки: [NodeJS](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2), Javascript, [Python](https://docs.microsoft.com/windows/python/web-frameworks), Ruby, C/C++, C# и F#, Rust, Go и пр.
+    * языки: [NodeJS](/windows/nodejs/setup-on-wsl2), Javascript, [Python](/windows/python/web-frameworks), Ruby, C/C++, C# и F#, Rust, Go и пр.
     * Службы. SSHD, [MySQL](./tutorials/wsl-database.md), Apache, lighttpd, [MongoDB](./tutorials/wsl-database.md), [PostgreSQL](./tutorials/wsl-database.md).
 * Установите дополнительное программное обеспечение с помощью своего собственного диспетчера пакетов дистрибутивов GNU/Linux.
 * Вызывайте приложения Windows с помощью оболочки командной строки, похожей на UNIX.

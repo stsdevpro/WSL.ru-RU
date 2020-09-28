@@ -4,18 +4,18 @@ description: Справочник по предыдущим версиям Windo
 ms.date: 01/20/2020
 ms.topic: article
 ROBOTS: NOINDEX
-ms.openlocfilehash: 406158d769c4b465b6168d7cca45b48ff1f201fe
-ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
+ms.openlocfilehash: 33a42c8f3bd518fa45df2874a6c59b76cd8ec80a
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520843"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413365"
 ---
 # <a name="wsl-user-account-updates-on-previous-windows-versions"></a>Обновление учетной записи пользователя WSL в предыдущих версиях Windows
 
 Это содержимое архивируется для пользователей более ранних версий операционной системы Windows, которые поддерживают подсистему для Linux и нуждаются в поддержке обновления учетных записей пользователей Linux.
 
-Сведения о текущей документации см. в разделе [учетные записи пользователей для подсистемы Windows для Linux](../user-support.md).
+Сведения о текущей документации см. в разделе [учетные записи пользователей для подсистемы Windows для Linux](./user-support.md).
 
 ### <a name="for-creators-update-version-of-windows-and-earlier"></a>Для создателя обновлений Windows и более ранних версий
 

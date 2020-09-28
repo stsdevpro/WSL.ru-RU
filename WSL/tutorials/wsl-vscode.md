@@ -5,16 +5,16 @@ keywords: WSL, Windows, виндовссубсистем, GNU, Linux, bash, VS C
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f5d7bd4f582f504ea3c4bd814454b1dc881ffed2
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: b39b34644040354df44bf62ec7b878e3f5d667e6
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948658"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413345"
 ---
 # <a name="get-started-using-visual-studio-code-with-windows-subsystem-for-linux"></a>Приступая к работе с Visual Studio Code с подсистемой Windows для Linux
 
-Visual Studio Code, вместе с расширением Remote-WSL, позволяет использовать WSL в качестве среды разработки для полной времени непосредственно из VS Code. Вы можете выбрать один из следующих вариантов.
+Visual Studio Code, вместе с расширением Remote-WSL, позволяет использовать WSL в качестве среды разработки для полной времени непосредственно из VS Code. Можно сделать следующее.
 
 * Разработка в среде под управлением Linux
 * Использование цепочек инструментов и служебных программ для Linux
@@ -56,7 +56,7 @@ sudo apt-get install wget ca-certificates
 
 ### <a name="from-the-command-line"></a>Из командной строки
 
-Чтобы открыть проект из дистрибутива WSL, откройте командную строку распространения и введите:`code .`
+Чтобы открыть проект из дистрибутива WSL, откройте командную строку распространения и введите: `code .`
 
 ![Открыть проект WSL с VS Code удаленным сервером](../media/wsl-open-vs-code.gif)
 
@@ -92,7 +92,7 @@ sudo apt-get install wget ca-certificates
 
 ## <a name="install-windows-terminal-optional"></a>Установка Терминала Windows (необязательно)
 
-Новый терминал Windows включает несколько вкладок (для быстрого переключения между командной строкой, PowerShell или несколькими дистрибутивами Linux), настраиваемыми пользовательскими привязками клавиш (создайте собственные сочетания клавиш для открытия и закрытия вкладок, копирования и вставки и т. д.), эмодзи ☺ и пользовательские темы (цветовые схемы, стили и размеры шрифтов, фоновое изображение, размытие и прозрачность). Дополнительные сведения см. в документации по [терминалу Windows](https://docs.microsoft.com/windows/terminal).
+Новый терминал Windows включает несколько вкладок (для быстрого переключения между командной строкой, PowerShell или несколькими дистрибутивами Linux), настраиваемыми пользовательскими привязками клавиш (создайте собственные сочетания клавиш для открытия и закрытия вкладок, копирования и вставки и т. д.), эмодзи ☺ и пользовательские темы (цветовые схемы, стили и размеры шрифтов, фоновое изображение, размытие и прозрачность). Дополнительные сведения см. в документации по [терминалу Windows](/windows/terminal).
 
 1. Скачайте [Терминал Windows из Microsoft Store](https://www.microsoft.com/store/apps/9n0dx20hk701): При установке через магазин обновления выполняются автоматически.
 
@@ -105,7 +105,7 @@ sudo apt-get install wget ca-certificates
 * [Руководство по удаленной разработке с помощью WSL](https://code.visualstudio.com/remote-tutorials/wsl/getting-started)
 * [Использование DOCKER с WSL 2 и VS Code](https://code.visualstudio.com/blogs/2020/03/02/docker-in-wsl2)
 * [Использование C++ и WSL в VS Code](https://code.visualstudio.com/docs/cpp/config-wsl)
-* [Удаленная служба R для Linux](https://docs.microsoft.com/visualstudio/rtvs/setting-up-remote-r-service-on-linux?view=vs-2017)
+* [Удаленная служба R для Linux](/visualstudio/rtvs/setting-up-remote-r-service-on-linux)
 
 К дополнительным рекомендуемым расширениям относятся следующие:
 

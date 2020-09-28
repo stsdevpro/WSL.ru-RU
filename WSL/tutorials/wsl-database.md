@@ -5,23 +5,23 @@ keywords: WSL, Windows, виндовссубсистем, MySQL MongoDB, Postgre
 ms.date: 07/07/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 561af482e245892156a02fe287b95867ef80ded1
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: b7e4f7477741a931c4ee71e07736bac115443ac9
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719133"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413305"
 ---
 # <a name="get-started-with-databases-on-windows-subsystem-for-linux"></a>Начало работы с базами данных в подсистеме Windows для Linux
 
 Это пошаговое руководство поможет приступить к подключению проекта в WSL к базе данных. Приступая к работе с MySQL, PostgreSQL, MongoDB, Redis, Microsoft SQL Server или SQLite.
 
-## <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>предварительные требования
 
 - Использовать Windows 10 с [обновлением до версии 2004](ms-settings:windowsupdate), **сборкой 19041** или более поздней версии.
-- [WSL включен и установлен и обновлен до WSL 2](https://docs.microsoft.com/windows/wsl/install-win10).
-- [Дистрибутив Linux установлен](https://docs.microsoft.com/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice) (Ubuntu 18,04 для наших примеров).
-- Убедитесь, что дистрибутив Ubuntu 18,04 [работает в режиме WSL 2](https://docs.microsoft.com/windows/wsl/install-win10#set-your-distribution-version-to-wsl-1-or-wsl-2). (WSL может запускать дистрибутивы в режиме v1 или v2.) Это можно проверить, открыв PowerShell и введя следующее: `wsl -l -v`
+- [WSL включен и установлен и обновлен до WSL 2](../install-win10.md).
+- [Дистрибутив Linux установлен](../install-win10.md#step-6---install-your-linux-distribution-of-choice) (Ubuntu 18,04 для наших примеров).
+- Убедитесь, что дистрибутив Ubuntu 18,04 [работает в режиме WSL 2](../install-win10.md#set-your-distribution-version-to-wsl-1-or-wsl-2). (WSL может запускать дистрибутивы в режиме v1 или v2.) Это можно проверить, открыв PowerShell и введя следующее: `wsl -l -v`
 
 ## <a name="differences-between-database-systems"></a>Различия между системами баз данных
 
@@ -29,7 +29,7 @@ ms.locfileid: "90719133"
 
 - [MySQL](https://www.mysql.com/why-mysql/) (SQL)
 - [PostgreSQL](https://www.postgresql.org/about/) (SQL)
-- [Microsoft SQL Server](https://docs.microsoft.com/sql) (SQL)
+- [Microsoft SQL Server](/sql) (SQL)
 - [SQLite](https://www.sqlite.org/about.html) (SQL)
 - [MongoDB](https://www.mongodb.com/what-is-mongodb) (NoSQL)
 - [Redis](https://redis.io/topics/introduction) (NoSQL)
@@ -157,7 +157,7 @@ VS Code поддерживает работу с базами данных Mongo
 
 ## <a name="install-microsoft-sql-server"></a>Установка Microsoft SQL Server
 
-Чтобы установить SQL Server на WSL (Ubuntu 18,04), следуйте указаниям в этом кратком руководстве: [установка SQL Server и создание базы данных на Ubuntu](https://docs.microsoft.com/sql/linux/quickstart-install-connect-ubuntu).
+Чтобы установить SQL Server на WSL (Ubuntu 18,04), следуйте указаниям в этом кратком руководстве: [установка SQL Server и создание базы данных на Ubuntu](/sql/linux/quickstart-install-connect-ubuntu).
 
 Для работы с Microsoft SQL Server базами данных в VS Code используйте [расширение MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
 
@@ -226,4 +226,4 @@ VS Code поддерживает работу с базами данных Mongo
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-- [Настройка среды разработки в Windows 10](https://docs.microsoft.com/windows/dev-environment/)
+- [Настройка среды разработки в Windows 10](/windows/dev-environment/)

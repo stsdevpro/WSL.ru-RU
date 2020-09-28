@@ -5,12 +5,12 @@ keywords: WSL, Windows, виндовссубсистем, GNU, Linux, bash, ди
 ms.date: 06/08/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8053b817dab0639789401e2fcfb116f6f8e722a7
-ms.sourcegitcommit: a949595f3947c733f0bcdc54b30ccda5ae61577c
+ms.openlocfilehash: 5ea7d7adae42a44b040408575e7345c456f3acac
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89671211"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413285"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>Начало работы с подключением диска Linux в WSL 2 (Предварительная версия)
 
@@ -88,7 +88,7 @@ wsl --mount <DiskPath> --partition <PartitionNumber> --type <Filesystem>
 
 ## <a name="access-the-disk-content"></a>Доступ к содержимому диска
 
-После подключения доступ к диску можно получить по пути, на который указывает значение конфигурации: `automount.root` . Значение по умолчанию — `/mnt/wsl`.
+После подключения доступ к диску можно получить по пути, на который указывает значение конфигурации: `automount.root` . Значение по умолчанию — `/mnt/wsl`.
 
 В Windows доступ к диску можно получить из проводника, перейдя к: `\\wsl$\\<Distro>\\<Mountpoint>` (выберите любой дистрибутив Linux).
 
@@ -127,7 +127,7 @@ wsl --mount <Diskpath> -t vfat
 wsl --mount <Diskpath> -p <PartitionIndex>
 ```
 
-Это работает только в том случае, если диск является основной загрузочной записью (MBR) или GPT (таблица разделов GUID). [Узнайте о стилях разделов — MBR и GPT](https://docs.microsoft.com/windows-server/storage/disk-management/initialize-new-disks#about-partition-styles---gpt-and-mbr).
+Это работает только в том случае, если диск является основной загрузочной записью (MBR) или GPT (таблица разделов GUID). [Узнайте о стилях разделов — MBR и GPT](/windows-server/storage/disk-management/initialize-new-disks#about-partition-styles---gpt-and-mbr).
 
 ### <a name="specifying-mount-options"></a>Указание параметров подключения
 
@@ -137,7 +137,7 @@ wsl --mount <Diskpath> -p <PartitionIndex>
 wsl --mount <DiskPath> -o <MountOptions>
 ```
 
-Пример.
+Пример:
 
 ```powershell
 wsl --mount <DiskPath> -o "data=ordered"
