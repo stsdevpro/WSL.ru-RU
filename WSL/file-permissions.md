@@ -6,12 +6,12 @@ ms.date: 01/14/2020
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
-ms.openlocfilehash: 81d4cfa1ae57cdd077ba8cbd614111881724718a
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ms.openlocfilehash: 3de8553baf616ee8d5d45f0738615f83df952942
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336077"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413225"
 ---
 # <a name="file-permissions-for-wsl"></a>Разрешения файлов для WSL
 
@@ -32,7 +32,7 @@ WSL может добавлять четыре расширенных атриб
 | $LXMOD | Файловый режим (восьмеричная система и типы разрешений файловой системы, например: 0777) |
 | $LXDEV | Устройство (если это файл устройства) |
 
-Кроме того, любой файл, который не является обычным файлом или каталогом (например, символические ссылки, файлы FIFO, блочные устройства, сокеты Unix и символьные устройства) также имеет точку повторного анализа [NTFS](https://docs.microsoft.com/windows/win32/fileio/reparse-points). Это позволяет быстрее определить тип файла в определенном каталоге, не запрашивая его расширенных атрибутов.
+Кроме того, любой файл, который не является обычным файлом или каталогом (например, символические ссылки, файлы FIFO, блочные устройства, сокеты Unix и символьные устройства) также имеет точку повторного анализа [NTFS](/windows/win32/fileio/reparse-points). Это позволяет быстрее определить тип файла в определенном каталоге, не запрашивая его расширенных атрибутов.
 
 ## <a name="file-access-scenarios"></a>Сценарии доступа к файлам
 

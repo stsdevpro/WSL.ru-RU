@@ -4,12 +4,12 @@ description: Описывается взаимодействие Windows с ди
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: d78cc53aa40f896c20e40a5ef00570a97ccac258
-ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
+ms.openlocfilehash: 8e3568e4ca94f9b381b7827a237c2b637b97ae57
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86093268"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413075"
 ---
 # <a name="windows-interoperability-with-linux"></a>Взаимодействие Windows с Linux
 
@@ -240,4 +240,4 @@ ipconfig.exe | grep IPv4 | cut -d: -f2
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-* [Запись блога WSL о взаимодействии за 2016 год](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)
+* [Запись блога WSL о взаимодействии за 2016 год](/archive/blogs/wsl/windows-and-ubuntu-interoperability)

@@ -5,12 +5,12 @@ keywords: wsl, подсистема windows для linux, установка в�
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 04b991d1019f2187a01189695e4078f4d8a8ba1f
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: 1894f0bfcb9ede7b05870c99912f30f6d0b7286e
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719143"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413254"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Скачивание пакетов дистрибутива подсистемы Windows для Linux вручную
 
@@ -40,7 +40,7 @@ ms.locfileid: "90719143"
 При желании вы также можете скачать предпочтительные дистрибутивы с помощью командной строки.
 
  ### <a name="download-using-powershell"></a>Скачивание с помощью PowerShell
- Чтобы скачать дистрибутивы с помощью PowerShell, используйте командлет [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest). Ниже приведены инструкции по скачиванию Ubuntu 16.04.
+ Чтобы скачать дистрибутивы с помощью PowerShell, используйте командлет [Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest). Ниже приведены инструкции по скачиванию Ubuntu 16.04.
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
@@ -56,7 +56,7 @@ Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseB
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-В приведенном выше примере выполняется `curl.exe` (а не только `curl`), чтобы убедиться, что в PowerShell вызывается реальный исполняемый файл cURL, а не его псевдоним для [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest).
+В приведенном выше примере выполняется `curl.exe` (а не только `curl`), чтобы убедиться, что в PowerShell вызывается реальный исполняемый файл cURL, а не его псевдоним для [Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest).
 
 > Примечание. Использование `curl` может быть предпочтительным, если необходимо вызвать или создать сценарий для скачивания с помощью командлетов командной строки и сценариев `.bat` / `.cmd`.
 

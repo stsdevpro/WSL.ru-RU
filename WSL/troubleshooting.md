@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 83c73e99afd4745081290340a67edee3ec26dc60
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 78d122ce22e3ab4d67339cc6f0d6038502e23dbb
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818716"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413295"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Устранение неполадок подсистемы Windows для Linux
 
@@ -87,8 +87,8 @@ WSL 2
 
 ### <a name="please-enable-the-virtual-machine-platform-windows-feature-and-ensure-virtualization-is-enabled-in-the-bios"></a>Включите компонент платформы виртуальных машин Windows и убедитесь, что в BIOS включена виртуализация.
 
-1. Проверка [требований к системе Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.)
-2. Если компьютер является виртуальной машиной, включите [вложенную виртуализацию](https://docs.microsoft.com/windows/wsl/wsl2-faq#can-i-run-wsl-2-in-a-virtual-machine) вручную. Запустите PowerShell с правами администратора и выполните следующую команду: 
+1. Проверка [требований к системе Hyper-V](/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.)
+2. Если компьютер является виртуальной машиной, включите [вложенную виртуализацию](./wsl2-faq.md#can-i-run-wsl-2-in-a-virtual-machine) вручную. Запустите PowerShell с правами администратора и выполните следующую команду: 
 
 ```powershell
 Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true

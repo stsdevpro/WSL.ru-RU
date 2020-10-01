@@ -6,12 +6,12 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f79acbbc7f6436bae54c5160e769cababa76a341
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: d7b868f959c62879524dcbdad20509ef35fecfce
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818696"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413275"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Заметки о выпуске подсистемы Windows для Linux
 
@@ -1184,14 +1184,14 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="fixed"></a>Фиксированный
 
-- [Включена поддержка последовательных устройств](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/).
+- [Включена поддержка последовательных устройств](/archive/blogs/wsl/serial-support-on-the-windows-subsystem-for-linux).
 - Добавлен параметр IP-сокета IP_OPTIONS [GH 1116].
 - Реализована функция pwritev (при передаче файла в nginx/PHP-FPM) [GH 1506].
 - Добавлены параметры IP-сокета IP_MULTICAST_IF и IPV6_MULTICAST_IF [GH 990].
 - Поддержка параметров сокета IP_MULTICAST_LOOP и IPV6_MULTICAST_LOOP [GH 1678].
 - Добавлен параметр сокета IP(V6)_MTU для приложений node, traceroute, dig, nslookup, host.
 - Добавлен параметр IP-сокета IPV6_UNICAST_HOPS.
-- [Улучшения файловой системы](https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/).
+- [Улучшения файловой системы](/archive/blogs/wsl/file-system-improvements-to-the-windows-subsystem-for-linux).
     * Разрешено подключение путей UNC.
     * Включена поддержка CDFS в DrvFs.
     * Правильная обработка разрешений для сетевых файловых систем в DrvFs.
@@ -1208,7 +1208,7 @@ wslconfig.exe /terminate <DistributionName>
 
 Общие сведения о сборке Windows 16170 доступны в [блоге о Windows](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/).<br/>
 
-Мы опубликовали новую[запись блога](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/), в которой обсуждаем наши усилия по тестированию WSL.
+Мы опубликовали новую[запись блога](/archive/blogs/wsl/testing-the-windows-subsystem-for-linux), в которой обсуждаем наши усилия по тестированию WSL.
 
 ### <a name="fixed"></a>Фиксированный
 
@@ -1540,7 +1540,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="fixed"></a>Фиксированный
 
-- Улучшены уведомления о процессе Pico для Windows.  Дополнительные сведения см. в [блоге о WSL](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/).
+- Улучшены уведомления о процессе Pico для Windows.  Дополнительные сведения см. в [блоге о WSL](/archive/blogs/wsl/wsl-antivirus-and-firewall-compatibility).
 - Повышена стабильность взаимодействия с Windows.
 - Устранена ошибка 0x80070057, возникавшая при запуске bash.exe при включенной защите корпоративных данных (EDP).
 - Дополнительные исправления ошибок и усовершенствования.
@@ -1586,8 +1586,8 @@ $ cmd.exe /c dir
 
 Дополнительные сведения:
 
-- [Блог команды WSL по взаимодействию](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [Документация по взаимодействию на сайте MSDN](https://msdn.microsoft.com/commandline/wsl/interop)<br/>
+- [Блог команды WSL по взаимодействию](/archive/blogs/wsl/windows-and-ubuntu-interoperability)<br/>
+- [Документация по взаимодействию на сайте MSDN](./interop.md)<br/>
 
 ### <a name="fixed"></a>Фиксированный
 
@@ -1807,7 +1807,7 @@ $ cmd.exe /c dir
 
 ### <a name="fixed"></a>Фиксированный
 - Исправления для подготовки к выпуску юбилейного обновления Windows 10 2-го августа.
-  - Дополнительные сведения о компоненте WSL в юбилейном обновлении можно найти на нашем [блоге](https://blogs.msdn.microsoft.com/wsl/).
+  - Дополнительные сведения о компоненте WSL в юбилейном обновлении можно найти на нашем [блоге](/archive/blogs/wsl/).
 
 <br/>
 
@@ -1926,7 +1926,7 @@ $ cmd.exe /c dir
 ## <a name="build-14342"></a>Сборка 14342
 Общие сведения о сборке Windows 14342 доступны в [блоге о Windows](https://aka.ms/wip14342). <br/>
 
-Сведения о VolFs и DriveFs можно найти в [блоге о WSL](https://blogs.msdn.microsoft.com/wsl). <br/>
+Сведения о VolFs и DriveFs можно найти в [блоге о WSL](/archive/blogs/wsl/). <br/>
 
 ### <a name="fixed"></a>Фиксированный
 - Исправлена проблема с установкой, возникавшая, когда в имени пользователя Windows присутствовали знаки Юникода.

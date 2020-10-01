@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, подсистема windows для
 ms.date: 07/24/2018
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 7ce4455dd4ab5e75d69ba841d7dfb7963af9c891
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 11dc84d3a58b51241c7c63e8ca35eba94a12508b
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235795"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413215"
 ---
 # <a name="initializing-a-newly-installed-distribution"></a>Инициализация недавно установленного дистрибутива
 
@@ -52,7 +52,7 @@ sudo apt update && sudo apt upgrade
 
 > Windows не выполняет автоматическую установку новых версий или обновление дистрибутивов Linux. Это задача, выполнение которой пользователи Linux предпочитают контролировать самостоятельно.
 
-Готово! Приятного вам использования дистрибутивов Linux в WSL. Чтобы узнать больше о WSL, ознакомьтесь с другой [документацией по WSL](https://aka.ms/wsldocs) или перейдите на [страницу учебных материалов по WSL](https://aka.ms/learnwsl).
+Готово! Приятного вам использования дистрибутивов Linux в WSL. Чтобы узнать больше о WSL, ознакомьтесь с другой [документацией по WSL](./index.md) или перейдите на [страницу учебных материалов по WSL](https://aka.ms/learnwsl).
 
 ![Приятного вам использования Linux в WSL](media/linux-on-wsl.png)
 
