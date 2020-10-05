@@ -5,22 +5,22 @@ keywords: BashOnWindows, bash, wsl, windows, подсистема windows для
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 02f4ff41614f78c0e588f329c777a87f8b416233
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: ac0025257ae70547c5b20d89535510a8b8bb006c
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235833"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413105"
 ---
 # <a name="set-up-windows-subsystem-for-linux-for-your-enterprise-company"></a>Настройка подсистемы Windows для Linux для вашего предприятия
 
-Microsoft Store для бизнеса предлагает различные решения для предприятий, которые хотят развернуть WSL в своей компании. Документация [Microsoft Store для бизнеса и образования](https://docs.microsoft.com/microsoft-store/) является отличным ресурсом для поиска общих сведений о магазине.
+Microsoft Store для бизнеса предлагает различные решения для предприятий, которые хотят развернуть WSL в своей компании. Документация [Microsoft Store для бизнеса и образования](/microsoft-store/) является отличным ресурсом для поиска общих сведений о магазине.
 
 Если вы представляете компанию, которая только собирается начать установку WSL, выполните следующие шаги:
 
-* [Зарегистрируйтесь в Microsoft Store для бизнеса и приступайте к работе](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business-overview)
-* [Получите сведения об управлении своими продуктами и услугами (включая тем, кто может получать доступ к каким приложениям в вашем личном магазине)](https://docs.microsoft.com/microsoft-store/manage-apps-microsoft-store-for-business-overview). Здесь вы можете добавлять дистрибутивы WSL в свое хранилище и контролировать, кто может их устанавливать
-* [Используйте выбранный метод распространения для развертывания программного обеспечения в компании](https://docs.microsoft.com/microsoft-store/distribute-apps-to-your-employees-microsoft-store-for-business)
+* [Зарегистрируйтесь в Microsoft Store для бизнеса и приступайте к работе](/microsoft-store/sign-up-microsoft-store-for-business-overview)
+* [Получите сведения об управлении своими продуктами и услугами (включая тем, кто может получать доступ к каким приложениям в вашем личном магазине)](/microsoft-store/manage-apps-microsoft-store-for-business-overview). Здесь вы можете добавлять дистрибутивы WSL в свое хранилище и контролировать, кто может их устанавливать
+* [Используйте выбранный метод распространения для развертывания программного обеспечения в компании](/microsoft-store/distribute-apps-to-your-employees-microsoft-store-for-business)
 * Свяжитесь с сотрудниками вашей компании, чтобы они могли использовать эту ссылку на эту документацию для установки WSL: [Установка подсистемы Windows для Linux](./install-win10.md)
 
 ## <a name="how-to-distribute-a-linux-distribution-on-windows-offline"></a>Как распределять дистрибутив Linux в Windows в автономном режиме
@@ -29,7 +29,7 @@ Microsoft Store для бизнеса предлагает различные р
 
 ### <a name="set-up-an-azure-active-directory-account"></a>Настройка учетной записи Azure Active Directory.
 
-Чтобы получить установщик приложений Microsoft Store необходимо [зарегистрироваться для использования учетной записи Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/sign-up-organization?WT.mc_id=windows-c9-niner) и быть глобальным администратором организации. Если у вас уже есть учетная запись, этот шаг можно пропустить.
+Чтобы получить установщик приложений Microsoft Store необходимо [зарегистрироваться для использования учетной записи Azure AD](/azure/active-directory/fundamentals/sign-up-organization?WT.mc_id=windows-c9-niner) и быть глобальным администратором организации. Если у вас уже есть учетная запись, этот шаг можно пропустить.
 
 ### <a name="set-up-wsl-using-your-microsoft-store-for-business-account"></a>Настройка WSL с помощью учетной записи Microsoft Store для бизнеса
 
@@ -53,14 +53,14 @@ Microsoft Store для бизнеса предлагает различные р
 
 5. Выберите "Автономная" лицензия в раскрывающемся меню "Тип лицензии" и выберите "Получить приложение". (Некоторые дистрибутивы Linux могут не предоставлять автономную лицензию).
 
-    ![Страница продукта Ubuntu для MS Store для бизнеса](media/offlineinstallscreens/4-screen.png)
+    ![Выбор параметра автономной лицензии для Ubuntu в MS Store для бизнеса](media/offlineinstallscreens/4-screen.png)
 
 6. Нажмите кнопку "Управление", чтобы перейти на страницу продукта приложения.
 
-    ![Страница продукта Ubuntu для MS Store для бизнеса](media/offlineinstallscreens/5-screen.png)
+    ![Выбор параметра управления для Ubuntu в MS Store для бизнеса](media/offlineinstallscreens/5-screen.png)
 
 7. Выберите архитектуру и скачайте пакет для использования в автономном режиме.
 
-    ![Страница сведений о продукте Ubuntu для Microsoft Store для бизнеса](media/offlineinstallscreens/6-screen.png)
+    ![Выбор параметра архитектуры для Ubuntu в MS Store для бизнеса](media/offlineinstallscreens/6-screen.png)
 
 Затем этот установщик можно распространить на любой компьютер, на который необходимо установить WSL.
