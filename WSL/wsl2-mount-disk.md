@@ -5,12 +5,12 @@ keywords: WSL, Windows, виндовссубсистем, GNU, Linux, bash, ди
 ms.date: 06/08/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ea7d7adae42a44b040408575e7345c456f3acac
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: 8c67b0f34dcde925bb91979e9153049fdd474db3
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413285"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211738"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>Начало работы с подключением диска Linux в WSL 2 (Предварительная версия)
 
@@ -88,7 +88,7 @@ wsl --mount <DiskPath> --partition <PartitionNumber> --type <Filesystem>
 
 ## <a name="access-the-disk-content"></a>Доступ к содержимому диска
 
-После подключения доступ к диску можно получить по пути, на который указывает значение конфигурации: `automount.root` . Значение по умолчанию — `/mnt/wsl`.
+После подключения доступ к диску можно получить по пути, на который указывает значение конфигурации: `automount.root` . Значение по умолчанию: `/mnt/wsl`.
 
 В Windows доступ к диску можно получить из проводника, перейдя к: `\\wsl$\\<Distro>\\<Mountpoint>` (выберите любой дистрибутив Linux).
 
@@ -137,7 +137,7 @@ wsl --mount <Diskpath> -p <PartitionIndex>
 wsl --mount <DiskPath> -o <MountOptions>
 ```
 
-Пример:
+Пример
 
 ```powershell
 wsl --mount <DiskPath> -o "data=ordered"
