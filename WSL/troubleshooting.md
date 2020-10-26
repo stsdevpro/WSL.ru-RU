@@ -5,22 +5,22 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 78d122ce22e3ab4d67339cc6f0d6038502e23dbb
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: c3becde51cf16b95f96222a08a2fe7249cd936c1
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413295"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211758"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Устранение неполадок подсистемы Windows для Linux
 
-Для получения поддержки по вопросам, связанным с WSL, см. наш репозиторий GitHub: https://github.com/Microsoft/wsl/issues
+Для получения поддержки по вопросам, связанным с WSL, изучите наш [репозиторий продукта WSL на сайте GitHub](https://github.com/Microsoft/wsl/issues).
 
 ## <a name="search-for-any-existing-issues-related-to-your-problem"></a>Поиск описанных проблем, связанных с вашей проблемой
 
-При возникновении технических проблем используйте репозиторий продуктов: https://github.com/Microsoft/wsl/issues
+При возникновении технических проблем используйте [репозиторий продукта](https://github.com/Microsoft/wsl/issues).
 
-При возникновении проблем, связанных с содержимым этой документации, используйте репозиторий документов: https://github.com/MicrosoftDocs/wsl/issues
+При возникновении проблем, связанных с содержимым этой документации, используйте [репозиторий документов](https://github.com/MicrosoftDocs/wsl/issues).
 
 ## <a name="submit-a-bug-report"></a>Отправка отчета об ошибке
 
@@ -28,7 +28,7 @@ ms.locfileid: "91413295"
 
 ## <a name="submit-a-feature-request"></a>Отправка запроса на добавление возможностей
 
-Чтобы запросить новую возможность, связанную с функциональностью или совместимостью WSL, отправьте запрос в репозитории продуктов: https://github.com/Microsoft/wsl/issues
+Чтобы запросить новую возможность, связанную с функциональностью или совместимостью WSL, [создайте запрос в репозитории продуктов](https://github.com/Microsoft/wsl/issues).
 
 ## <a name="contribute-to-the-docs"></a>Участие в разработке документации
 
@@ -40,34 +40,37 @@ ms.locfileid: "91413295"
 
 ## <a name="common-issues"></a>Распространенные проблемы
 
-### <a name="im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2"></a>Я использую Windows 10 версии 1903, но не вижу параметры для WSL 2. 
+### <a name="im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2"></a>Я использую Windows 10 версии 1903, но не вижу параметры для WSL 2.
 
-Скорее всего, это связано с тем, что на компьютере еще не установлены исправления для WSL 2. Чтобы решить эту проблему самым простым способом, перейдите в параметры Windows, нажмите кнопку "Проверить наличие обновлений" и установите последние обновления в системе. Полные инструкции по получению исправления для старой версии см. [здесь](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it). 
+Скорее всего, это связано с тем, что на компьютере еще не установлены исправления для WSL 2. Чтобы решить эту проблему самым простым способом, перейдите в параметры Windows, нажмите кнопку "Проверить наличие обновлений" и установите последние обновления в системе. Изучите [полные инструкции по получению исправления для старой версии](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it).
 
-Если после нажатия кнопки "Проверить наличие обновлений" вы не получили обновление, можно установить исправления KB4566116 вручную, используя [следующую ссылку](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116).  
+Если после нажатия кнопки "Проверить наличие обновлений" вы не получили обновление, можно [установить исправления KB4566116 вручную](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116).  
 
 ### <a name="error-0x1bc-when-wsl---set-default-version-2"></a>Ошибка. 0x1bc, когда `wsl --set-default-version 2`
+
 Это может произойти, если язык интерфейса или язык системы не является английским.
-```
+
+```powershell
 wsl --set-default-version 2
 Error: 0x1bc
 For information on key differences with WSL 2 please visit https://aka.ms/wsl2
 ```
 
 Фактическая ошибка для `0x1bc`:
-```
+
+```powershell
 WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel
 ```
 
 См. сведения о проблеме [5749](https://github.com/microsoft/WSL/issues/5749).
 
-
 ### <a name="cannot-access-wsl-files-from-windows"></a>Не удается получить доступ к файлам WSL из Windows
+
 Файловый сервер протокола 9p предоставляет службу на стороне Linux, которая позволяет Windows получить доступ к файловой системе Linux. Если вы не можете получить доступ к WSL с помощью `\\wsl$` в Windows, возможно, это вызвано неправильным запуском 9P.
 
-Чтобы убедиться в этом, можно проверить журналы запуска с помощью команды `dmesg |grep 9p`. Если ошибки есть, отобразятся сведения о них. Вывод выглядит следующим образом: 
+Чтобы убедиться в этом, можно проверить журналы запуска с помощью команды `dmesg |grep 9p`. Если ошибки есть, отобразятся сведения о них. Вывод выглядит следующим образом:
 
-```
+```bash
 [    0.363323] 9p: Installing v9fs 9p2000 file system support
 [    0.363336] FS-Cache: Netfs '9p' registered for caching
 [    0.398989] 9pnet: Installing 9P2000 support
@@ -75,7 +78,8 @@ WSL 2 requires an update to its kernel component. For information please visit h
 
 Дополнительные сведения об этой ошибке см. в [этом потоке GitHub](https://github.com/microsoft/wsl/issues/5307).
 
-### <a name="cant-start-wsl-2-distro-and-only-see-wsl-2-in-output"></a>Не удается запустить дистрибутив WSL 2 — отображается только WSL 2 в выходных данных
+### <a name="cant-start-wsl-2-distribution-and-only-see-wsl-2-in-output"></a>Не удается запустить дистрибутив WSL 2, а в выходных данных отображается только WSL 2.
+
 Если язык интерфейса не английский, возможно, отображается усеченная версия текста ошибки.
 
 ```powershell
@@ -85,17 +89,49 @@ WSL 2
 
 Чтобы устранить эту проблему, перейдите по адресу `https://aka.ms/wsl2kernel` и установите ядро вручную, следуя инструкциям на этой странице документации. 
 
-### <a name="please-enable-the-virtual-machine-platform-windows-feature-and-ensure-virtualization-is-enabled-in-the-bios"></a>Включите компонент платформы виртуальных машин Windows и убедитесь, что в BIOS включена виртуализация.
+### <a name="command-not-found-when-executing-windows-exe-in-linux"></a>Ошибка `command not found` при выполнении исполняемых файлов Windows в Linux
 
-1. Проверка [требований к системе Hyper-V](/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.)
-2. Если компьютер является виртуальной машиной, включите [вложенную виртуализацию](./wsl2-faq.md#can-i-run-wsl-2-in-a-virtual-machine) вручную. Запустите PowerShell с правами администратора и выполните следующую команду: 
+Пользователи могут запускать исполняемые файлы Windows, например notepad.exe, прямо в среде Linux. Но иногда это действие приводит к ошибке "Команда не найдена", как показано ниже: 
 
-```powershell
-Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
+```Bash
+$ notepad.exe
+-bash: notepad.exe: command not found
 ```
 
-3. Следуйте рекомендациям производителя компьютера, чтобы включить виртуализацию. Как правило, для проверки того, что эти функции включены в ЦП, может использоваться BIOS системы. 
-4. Перезагрузите компьютер после включения дополнительного компонента `Virtual Machine Platform`. 
+Если в переменной $PATH нет обязательных путей Win32, подсистема взаимодействие не сможет найти EXE-файл.
+Чтобы проверить это, выполните `echo $PATH` в среде Linux. В выходных данных вы должны увидеть путь к win32 (например, /mnt/c/Windows).
+Если вы не видите эти пути Windows, скорее всего переменная PATH перезаписана оболочкой Linux. 
+
+Ниже приведен пример файла /etc/profile на ОС Debian, который вызывал такую проблему:
+
+```Bash
+if [ "`id -u`" -eq 0 ]; then
+  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+else
+  PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+fi
+```
+
+Чтобы решить эту проблему в среде Debian, нужно удалить приведенные выше строки.
+Вы также можете добавить значения в переменную $PATH во время назначения, как показано ниже, но это может вызвать [другие проблемы](https://salsa.debian.org/debian/WSL/-/commit/7611edba482fd0b3f67143aa0fc1e2cc1d4100a6) с WSL и VSCode.
+
+Дополнительные сведения см. в описании проблем [5296](https://github.com/microsoft/WSL/issues/5296) и [5779](https://github.com/microsoft/WSL/issues/5779).
+
+### <a name="please-enable-the-virtual-machine-platform-windows-feature-and-ensure-virtualization-is-enabled-in-the-bios"></a>Включение компонента платформы виртуальных машин Windows и проверка включенной виртуализации в BIOS
+
+Включите компонент платформы виртуальных машин Windows и убедитесь, что в BIOS включена виртуализация.
+
+1. Проверка [требований к системе Hyper-V](/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.)
+
+2. Если компьютер является виртуальной машиной, включите [вложенную виртуализацию](./wsl2-faq.md#can-i-run-wsl-2-in-a-virtual-machine) вручную. Запустите PowerShell с правами администратора и выполните следующую команду:
+
+    ```powershell
+    Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
+    ```
+
+3. Следуйте рекомендациям производителя компьютера, чтобы включить виртуализацию. Как правило, для проверки того, что эти функции включены в ЦП, может использоваться BIOS системы. Инструкции для этого процесса могут быть разными для разных компьютеров, один из примеров вы можете изучить в [этой статье](https://www.bleepingcomputer.com/tutorials/how-to-enable-cpu-virtualization-in-your-computer-bios/) от Bleeping Computer.
+
+4. Перезагрузите компьютер после включения дополнительного компонента `Virtual Machine Platform`.
 
 ### <a name="bash-loses-network-connectivity-once-connected-to-a-vpn"></a>Bash утрачивает подключение к сети после подключения к сети VPN
 
@@ -205,7 +241,7 @@ sudo update-locale LANG=en_US.UTF8
 
 ### <a name="permission-denied-error-when-using-ping"></a>Ошибка "Отказ в разрешении" при проверке связи
 
-В выпуске [Windows Anniversary Update, версия 1607](./release-notes.md#build-14388-to-windows-10-anniversary-update) для проверки связи в WSL требуются **права администратора**.  Чтобы выполнить проверку связи, запустите Bash для Ubuntu в Windows от имени администратора или запустите bash.exe из командной строки или сеанса PowerShell с привилегиями администратора.
+В выпуске [Windows Anniversary Update, версия 1607](./release-notes.md#build-14388-to-windows-10-anniversary-update) для проверки связи в WSL требуются **права администратора** .  Чтобы выполнить проверку связи, запустите Bash для Ubuntu в Windows от имени администратора или запустите bash.exe из командной строки или сеанса PowerShell с привилегиями администратора.
 
 В более поздних версиях Windows ([сборка 14926+](./release-notes.md#build-14926)) права администратора не требуются.
 
@@ -234,7 +270,7 @@ sudo update-locale LANG=en_US.UTF8
 Чтобы узнать архитектуру компьютера и номер сборки Windows, выберите  
 **Параметры** > **Система** > **О программе**
 
-Найдите поля **Сборка ОС** и **Тип системы**.  
+Найдите поля **Сборка ОС** и **Тип системы** .  
     ![Снимок экрана с полями "Сборка ОС" и "Тип системы"](media/system.png)
 
 Чтобы найти номер сборки Windows Server, выполните в PowerShell следующую команду.  
@@ -309,7 +345,7 @@ sudo apt-get install openssh-server
 
 Если вы видите эту ошибку:
 
-```
+```bash
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -318,7 +354,7 @@ Permissions 0777 for '/home/artur/.ssh/private-key.pem' are too open.
 
 Чтобы устранить эту проблему, добавьте следующий текст в файл ```/etc/wsl.conf```:
 
-```
+```bash
 [automount]
 enabled = true
 options = metadata,uid=1000,gid=1000,umask=0022

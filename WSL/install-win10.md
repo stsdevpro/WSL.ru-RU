@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, подсистема windows для
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 74a5960609e058b2f2da6160ecd04dc48f666a69
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: cf349615dc40f1912fdb4dff3f5593627fa246e6
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413117"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211778"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Руководство по установке подсистемы Windows для Linux в Windows 10
 
@@ -28,7 +28,7 @@ ms.locfileid: "91413117"
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-Теперь перейдите к шагу 2 и выполните обновление до WSL 2. Если вы хотите установить только WSL 1, вы можете перезагрузить компьютер и перейти к разделу [Шаг 6. Установка дистрибутива Linux по выбору](./install-win10.md#step-6---install-your-linux-distribution-of-choice). Чтобы выполнить обновление до WSL 2, дождитесь перезагрузки компьютера и перейдите к следующему шагу.
+Теперь перейдите к шагу 2 и выполните обновление до WSL 2. Если вы хотите установить только WSL 1, вы можете **перезагрузить** компьютер и перейти к разделу [Шаг 6. Установка дистрибутива Linux по выбору](./install-win10.md#step-6---install-your-linux-distribution-of-choice). Чтобы выполнить обновление до WSL 2, **дождитесь перезагрузки** компьютера и перейдите к следующему шагу.
 
 ## <a name="step-2---update-to-wsl-2"></a>Шаг 2. Обновление до WSL 2
 
@@ -40,14 +40,14 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 - Для систем ARM64: **версия 2004** или более поздняя со **сборкой 19041** или более поздней версии.
 - Сборки ниже 18362 не поддерживают WSL 2. Для обновления версии Windows используйте [помощник по обновлению Windows](https://www.microsoft.com/software-download/windows10).
 
-Чтобы проверить версию и номер сборки, нажмите клавиши **Windows+R**, введите **winver** и нажмите кнопку **ОК**. (Или введите команду `ver` в командной строке Windows). В меню "Параметры" [выполните обновление до последней версии Windows](ms-settings:windowsupdate).
+Чтобы проверить версию и номер сборки, нажмите клавиши **Windows+R** , введите **winver** и нажмите кнопку **ОК** . (Или введите команду `ver` в командной строке Windows). В меню "Параметры" [выполните обновление до последней версии Windows](ms-settings:windowsupdate).
 
 > [!NOTE]
 > Если вы используете Windows 10 версии 1903 или 1909, в меню Windows откройте меню "Параметры", перейдите к разделу "Обновления и безопасность" и выберите "Проверить наличие обновлений". Номер сборки должен быть 18362.1049 и выше или 18363.1049 и выше с номером дополнительной сборки не ниже 1049. Подробнее: [поддержка WSL 2 вскоре будет реализована в Windows 10 версий 1903 и 1909](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/). См. [инструкции по устранению неполадок](./troubleshooting.md#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2).
 
 ## <a name="step-3---enable-virtual-machine-feature"></a>Шаг 3. Включение компонента виртуальных машин
 
-Перед установкой WSL 2 необходимо включить необязательный компонент **Платформа виртуальных машин**.
+Перед установкой WSL 2 необходимо включить необязательный компонент **Платформа виртуальных машин** .
 
 Запустите PowerShell с правами администратора и выполните следующую команду.
 
@@ -74,7 +74,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 ## <a name="step-5---set-wsl-2-as-your-default-version"></a>Шаг 5. Выбор WSL 2 в качестве версии по умолчанию
 
-Откройте PowerShell от имени администратора и выполните следующую команду, чтобы задать WSL 2 в качестве версии по умолчанию при установке нового дистрибутива Linux:
+Откройте PowerShell и выполните следующую команду, чтобы задать WSL 2 в качестве версии по умолчанию при установке нового дистрибутива Linux:
 
 ```powershell
 wsl --set-default-version 2
@@ -160,7 +160,7 @@ wsl --set-default-version 2
 
 - **Сбой установки с ошибкой 0x80070003**
   - Подсистема Windows для Linux работает только на системном диске (обычно это диск `C:`). Убедитесь, что дистрибутивы хранятся на системном диске.  
-  - Выберите **Параметры** -> **Хранилище** -> **More Storage Settings: (Другие параметры хранилища:) Изменить место сохранения нового содержимого**.
+  - Выберите **Параметры** -> **Система --> **Хранилище** -> **Другие параметры хранилища: Изменить место сохранения нового содержимого** .
     ![Изображение параметров системы для установки приложений на диске C:](media/AppStorage.png)
 
 - **Сбой WslRegisterDistribution с ошибкой 0x8007019e**
