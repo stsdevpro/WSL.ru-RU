@@ -2,16 +2,16 @@
 title: Сравнение WSL 2 и WSL 1
 description: 'Сравните версии 1 и 2 подсистемы Windows для Linux. Узнайте о новых возможностях WSL 2: актуальной версии ядра Linux, более высокой скорости работы, полной совместимости системных вызовов. WSL 1 лучше подходит для сценариев, когда файлы хранятся в разных операционных файловых системах. Вы можете увеличить размер виртуального жесткого диска (VHD) WSL 2.'
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubuntu, debian, suse, windows 10, изменения взаимодействия с пользователем, WSL 2, ядро linux, сетевые приложения, localhost, IPv6, виртуальный жесткий диск, VHD, ограничения VHD, ошибка VHD
-ms.date: 09/15/2020
+ms.date: 09/28/2020
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.custom: contperfq1
-ms.openlocfilehash: ce68a19da519ddae5dd562c75c9ba2bac3659190
-ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
+ms.openlocfilehash: 93fdbf87bf588a8b23aa917ea0cab05020e0ea3e
+ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92211768"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92444873"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Сравнение WSL 1 и WSL 2
 
@@ -49,7 +49,12 @@ WSL 2 использует последнюю и самую новую техн
 - Используйте корневой каталог файловой системы Linux: `\\wsl$\Ubuntu-18.04\home\<user name>\Project`
 - Не является корневым каталогом файловой системы Windows: `C:\Users\<user name>\Project`
 
-Доступ к корневой файловой системе Linux можно получить с помощью приложений и средств Windows, таких как проводник. Попробуйте открыть дистрибутив Linux (например, Ubuntu), убедитесь, что находитесь в домашнем каталоге Linux, введя следующую команду: `cd ~`. Затем откройте файловую систему Linux в проводнике, введя *(не забудьте точку в конце)* : `explorer.exe .`
+Все выполняющиеся сейчас дистрибутивы (`wsl -l`) доступны через сетевое подключение. Нажмите клавиши \[WIN+R\] или введите `\\wsl$` в адресную строку проводника, чтобы найти соответствующие имена дистрибутивов и получить доступ к их корневым файловым системам.
+
+Вы также можете использовать команды Windows в [терминале](https://en.wikipedia.org/wiki/Linux_console) Linux в WSL. Попробуйте открыть дистрибутив Linux (например, Ubuntu). Убедитесь, что вы находитесь в домашнем каталоге Linux, введя команду `cd ~`. Затем откройте файловую систему Linux в проводнике, введя *(не забудьте точку в конце)* : `powershell.exe /c start .`
+
+> [!IMPORTANT]
+> Если возникла ошибка **-bash: powershell.exe: command not found** (Команда не найдена) перейдите на страницу [устранения неполадок с WSL](troubleshooting.md#running-windows-commands-fails-inside-a-distribution).
 
 Подсистема WSL 2 доступна только в Windows 10 версии 1903, сборки 18362 или выше. Проверьте версию Windows, нажав **Windows + R** , введите **winver** , выберите **ОК** . (Или введите команду `ver` в командной строке Windows). Может потребоваться [выполнить обновление до последней версии Windows](ms-settings:windowsupdate). Для сборок ниже 18362 WSL не поддерживается.
 
