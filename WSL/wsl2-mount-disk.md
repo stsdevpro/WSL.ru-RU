@@ -5,12 +5,12 @@ keywords: WSL, Windows, виндовссубсистем, GNU, Linux, bash, ди
 ms.date: 06/08/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ee71d7f76a9fd0e6b20293ef30b0808d56c43a1
-ms.sourcegitcommit: cfb6c254322b8eb9c2c26e19ce970d4c046bc352
+ms.openlocfilehash: 5d996586baf5e22cc557c27c6f54b2cb1a91dc4b
+ms.sourcegitcommit: cc81ebc749cf84dd58e9f57ee4cc72b5c72be1fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035730"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93352657"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>Начало работы с подключением диска Linux в WSL 2 (Предварительная версия)
 
@@ -169,6 +169,18 @@ wsl --unmount [DiskPath]
 
 > [!NOTE]
 > Если не удается отключить один диск, WSL 2 можно принудительно завершить, выполнив команду `wsl --shutdown` , которая отключит диск.
+
+## <a name="mount-a-vhd-in-wsl"></a>Подключение виртуального жесткого диска в WSL
+
+Вы также можете подключить файлы виртуального жесткого диска (VHD) к WSL с помощью `wsl --mount` . Для этого сначала необходимо подключить виртуальный жесткий диск к Windows с помощью [`Mount-VHD`](https://docs.microsoft.com/powershell/module/hyper-v/mount-vhd) команды в Windows. Не забудьте выполнить эту команду в окне с правами администратора. Ниже приведен пример, в котором мы используем эту команду, а также выводится путь к диску. 
+
+```powershell
+Write-Output "\.\\PhysicalDrive$((Mount-VHD -Path .\ext4.vhdx -PassThru | Get-Disk).Number)"
+```
+
+Вы можете использовать приведенные выше выходные данные, чтобы получить путь к диску для этого виртуального жесткого диска и подключить его к WSL, следуя инструкциям из предыдущего раздела.
+
+Эту методику также можно использовать для подключения и взаимодействия с виртуальными жесткими дисками других WSL дистрибутивов, так как каждый WSL 2 дистрибутив хранится с помощью файла виртуального жесткого диска с именем: `ext4.vhdx` . По умолчанию виртуальные жесткие диски для WSL 2 дистрибутивов хранятся по этому пути: `C:\Users\[user]\AppData\Local\Packages\[distro]\LocalState\[distroPackageName]` , будьте внимательны при доступе к этим системным файлам, это рабочий процесс Power User.
 
 ## <a name="limitations"></a>Ограничения
 
