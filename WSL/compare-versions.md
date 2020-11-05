@@ -6,12 +6,12 @@ ms.date: 09/28/2020
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.custom: contperfq1
-ms.openlocfilehash: 93fdbf87bf588a8b23aa917ea0cab05020e0ea3e
-ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
+ms.openlocfilehash: be0cd21b65705e455f29bfd1666ce74078a21baa
+ms.sourcegitcommit: cfb6c254322b8eb9c2c26e19ce970d4c046bc352
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92444873"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035740"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Сравнение WSL 1 и WSL 2
 
@@ -56,7 +56,7 @@ WSL 2 использует последнюю и самую новую техн
 > [!IMPORTANT]
 > Если возникла ошибка **-bash: powershell.exe: command not found** (Команда не найдена) перейдите на страницу [устранения неполадок с WSL](troubleshooting.md#running-windows-commands-fails-inside-a-distribution).
 
-Подсистема WSL 2 доступна только в Windows 10 версии 1903, сборки 18362 или выше. Проверьте версию Windows, нажав **Windows + R** , введите **winver** , выберите **ОК** . (Или введите команду `ver` в командной строке Windows). Может потребоваться [выполнить обновление до последней версии Windows](ms-settings:windowsupdate). Для сборок ниже 18362 WSL не поддерживается.
+Подсистема WSL 2 доступна только в Windows 10 версии 1903, сборки 18362 или выше. Проверьте версию Windows, нажав **Windows + R** , введите **winver** , выберите **ОК**. (Или введите команду `ver` в командной строке Windows). Может потребоваться [выполнить обновление до последней версии Windows](ms-settings:windowsupdate). Для сборок ниже 18362 WSL не поддерживается.
 
 > [!NOTE]
 > WSL 2 работает с [VMware 15.5.5 и более поздней версии](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) и [VirtualBox 6 и более поздней версии](https://www.virtualbox.org/wiki/Changelog-6.0). Дополнительные сведения см. в статье [Вопросы и ответы по WSL 2](./wsl2-faq.md#will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox).
@@ -133,9 +133,10 @@ WSL 2 использует упрощенную служебную виртуа
 ### <a name="accessing-windows-networking-apps-from-linux-host-ip"></a>Доступ к сетевым приложениям Windows из Linux (IP-адрес основной системы)
 
 Если вы хотите получить доступ к сетевому приложению, работающему в Windows (например, к приложению, работающему на NodeJS или SQL Server) из дистрибутива Linux (напр., Ubuntu), необходимо использовать IP-адрес основной системы. Хотя это происходит и нечасто, для этого можно выполнить следующие действия.
-    - Получите IP-адрес основной системы, выполнив следующую команду из дистрибутива Linux: `cat /etc/resolv.conf`
-    - Скопируйте IP-адрес в строке, начинающейся с `nameserver`.
-    - Подключитесь к любому серверу Windows, используя скопированный IP-адрес.
+
+1. Получите IP-адрес основной системы, выполнив следующую команду из дистрибутива Linux: `cat /etc/resolv.conf`
+2. Скопируйте IP-адрес в строке, начинающейся с `nameserver`.
+3. Подключитесь к любому серверу Windows, используя скопированный IP-адрес.
 
 На изображении ниже показан пример подключения к серверу Node.js под управлением Windows через cURL.
 
@@ -191,7 +192,7 @@ netsh interface portproxy add v4tov4 listenport=4000 listenaddress=0.0.0.0 conne
       DISKPART> detail vdisk
       ```
 
-   - Изучите выходные данные команды **detail** .  Эти выходные данные будут содержать значение **Virtual size** (Объем виртуальной памяти).  Это текущее максимальное значение.  Переведите это значение в мегабайты.  Новое значение после изменения размера должно быть больше полученного значения.  Например, если команда **detail** возвращает значение **Virtual size: 256 GB** , необходимо предоставить значение больше, чем **256000** .  Получив новый размер в мегабайтах, введите следующую команду в **diskpart** :
+   - Изучите выходные данные команды **detail**.  Эти выходные данные будут содержать значение **Virtual size** (Объем виртуальной памяти).  Это текущее максимальное значение.  Переведите это значение в мегабайты.  Новое значение после изменения размера должно быть больше полученного значения.  Например, если команда **detail** возвращает значение **Virtual size: 256 GB** , необходимо предоставить значение больше, чем **256000**.  Получив новый размер в мегабайтах, введите следующую команду в **diskpart** :
 
       ```powershell
       DISKPART> expand vdisk maximum=<sizeInMegaBytes>
@@ -222,7 +223,7 @@ netsh interface portproxy add v4tov4 listenport=4000 listenaddress=0.0.0.0 conne
    ```
 
    > [!NOTE]
-   > Возможно, придется установить приложение **resize2fs** .  Для этого можно использовать такую команду: `sudo apt install resize2fs`.
+   > Возможно, придется установить приложение **resize2fs**.  Для этого можно использовать такую команду: `sudo apt install resize2fs`.
 
    Вывод имеет следующий вид:
 
