@@ -2,15 +2,15 @@
 title: Начало работы с подключением диска Linux в WSL 2 (Предварительная версия)
 description: Узнайте, как настроить подключение диска в WSL 2 и как получить к нему доступ.
 keywords: WSL, Windows, виндовссубсистем, GNU, Linux, bash, диск, ext4, FileSystem, Mount
-ms.date: 06/08/2020
+ms.date: 11/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d996586baf5e22cc557c27c6f54b2cb1a91dc4b
-ms.sourcegitcommit: cc81ebc749cf84dd58e9f57ee4cc72b5c72be1fd
+ms.openlocfilehash: 828f796839ff272261e98e88ca54a1af76471958
+ms.sourcegitcommit: 70ce8f7472167b6d8d760d0c54dbaab67904f2a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93352657"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93413689"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>Начало работы с подключением диска Linux в WSL 2 (Предварительная версия)
 
@@ -103,7 +103,7 @@ wsl --unmount <DiskPath>
 
 ## <a name="command-line-reference"></a>Справочник по командной строке
 
-### <a name="mouting-a-specific-filesystem"></a>Маутинг определенную файловую систему
+### <a name="mounting-a-specific-filesystem"></a>Подключение определенной файловой системы
 
 По умолчанию WSL 2 будет пытаться подключить устройство как ext4. Чтобы указать другую файловую систему, выполните команду:
 
@@ -120,7 +120,7 @@ wsl --mount <Diskpath> -t vfat
 > [!NOTE]
 > Чтобы получить список доступных файловых систем в WSL2, выполните команду: `cat /proc/filesystems`
 
-### <a name="mouting-a-specific-partition"></a>Маутинг определенную секцию
+### <a name="mounting-a-specific-partition"></a>Подключение определенного раздела
 
 По умолчанию WSL 2 пытается подключить весь диск. Чтобы подключить конкретный раздел, выполните команду:
 
@@ -138,7 +138,7 @@ wsl --mount <Diskpath> -p <PartitionIndex>
 wsl --mount <DiskPath> -o <MountOptions>
 ```
 
-Пример
+Пример:
 
 ```powershell
 wsl --mount <DiskPath> -o "data=ordered"
