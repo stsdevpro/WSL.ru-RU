@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 09/28/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f7fdc6243e6cd5156bfae23fd7a1d61514449cf5
-ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
+ms.openlocfilehash: bb9beb75d09c4ca51ae4764d2e4cc6125a9de923
+ms.sourcegitcommit: 59aff996af4bbac5698573d58bbed6537cfb47ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92444797"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933289"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Устранение неполадок подсистемы Windows для Linux
 
@@ -241,7 +241,7 @@ sudo update-locale LANG=en_US.UTF8
 
 ### <a name="permission-denied-error-when-using-ping"></a>Ошибка "Отказ в разрешении" при проверке связи
 
-В выпуске [Windows Anniversary Update, версия 1607](./release-notes.md#build-14388-to-windows-10-anniversary-update) для проверки связи в WSL требуются **права администратора** .  Чтобы выполнить проверку связи, запустите Bash для Ubuntu в Windows от имени администратора или запустите bash.exe из командной строки или сеанса PowerShell с привилегиями администратора.
+В выпуске [Windows Anniversary Update, версия 1607](./release-notes.md#build-14388-to-windows-10-anniversary-update) для проверки связи в WSL требуются **права администратора**.  Чтобы выполнить проверку связи, запустите Bash для Ubuntu в Windows от имени администратора или запустите bash.exe из командной строки или сеанса PowerShell с привилегиями администратора.
 
 В более поздних версиях Windows ([сборка 14926+](./release-notes.md#build-14926)) права администратора не требуются.
 
@@ -270,7 +270,7 @@ sudo update-locale LANG=en_US.UTF8
 Чтобы узнать архитектуру компьютера и номер сборки Windows, выберите  
 **Параметры** > **Система** > **О программе**
 
-Найдите поля **Сборка ОС** и **Тип системы** .  
+Найдите поля **Сборка ОС** и **Тип системы**.  
     ![Снимок экрана с полями "Сборка ОС" и "Тип системы"](media/system.png)
 
 Чтобы найти номер сборки Windows Server, выполните в PowerShell следующую команду.  
@@ -372,3 +372,7 @@ options = metadata,uid=1000,gid=1000,umask=0022
    Если присутствует назначение переменной PATH, измените файл, чтобы закомментировать блок назначения PATH, используя символ **#** .
 3. Проверьте, существует ли файл wsl.conf (`cat /etc/wsl.conf`), и убедитесь, что он не содержит `appendWindowsPath=false`. В противном случае закомментируйте эту строку.
 4. Перезапустите дистрибутив, введя `wsl -t `, после чего следует имя дистрибутива, либо выполните `wsl --shutdown` в cmd или PowerShell.
+
+### <a name="unable-to-boot-after-installing-wsl-2"></a>Не удается выполнить загрузку после установки WSL 2
+
+Мы осведомлены о проблемах, из-за которых пользователям не удается выполнить загрузку после установки WSL 2. Пока мы полностью диагностировали эту проблему, от пользователей поступали сообщения о том, что помочь в ее устранении может [изменение размера буфера](https://github.com/microsoft/WSL/issues/4784#issuecomment-639219363) или [установка правильных драйверов](https://github.com/microsoft/WSL/issues/4784#issuecomment-675702244). Просматривайте новейшие сведения об этой [проблеме на сайте GitHub](https://github.com/microsoft/WSL/issues/4784). 

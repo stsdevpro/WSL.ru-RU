@@ -5,12 +5,12 @@ keywords: WSL, Windows, ядро Linux, подсистема Windows для Linu
 ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 7bf2ef606d0bd23083f323117348aeea87c52b10
-ms.sourcegitcommit: 609850fadd20687636b8486264e87af47c538111
+ms.openlocfilehash: 4ca1bde2f8dc36c85b0c998c01f7f77eafe5f695
+ms.sourcegitcommit: fef5def707ccec57d6f0c5e9c89680754ea06411
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92444810"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95416651"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>Обновление ядра Linux в WSL 2
 
@@ -47,8 +47,9 @@ ms.locfileid: "92444810"
 
 Есть три возможные причины, по которым вы видите это сообщение:
 
-1. Вы используете старую версию Windows, которая не поддерживает WSL 2. Проверьте [требования к WSL 2](https://docs.microsoft.com/windows/wsl/install-win10#update-to-wsl-2) и выполните обновление, чтобы включить поддержку WSL 2. 
-2. `Windows Subsystem for Linux` не включена. См. статью [Руководство по установке подсистемы Windows для Linux в Windows 10](https://docs.microsoft.com/windows/wsl/install-win10).
+1. Вы используете старую версию Windows, которая не поддерживает WSL 2. Проверьте [требования к WSL 2](./install-win10.md#step-2---update-to-wsl-2) и выполните обновление, чтобы включить поддержку WSL. 
+2. 
+2. `Windows Subsystem for Linux` не включена. См. статью [Руководство по установке подсистемы Windows для Linux в Windows 10](./install-win10.md#step-1---enable-the-windows-subsystem-for-linux).
 3. После включения `Windows Subsystem for Linux` нужно перезагрузить компьютер. Сделайте это и повторите попытку.
 
 ### `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`
