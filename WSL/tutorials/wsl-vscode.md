@@ -5,16 +5,16 @@ keywords: WSL, Windows, виндовссубсистем, GNU, Linux, bash, VS C
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b39b34644040354df44bf62ec7b878e3f5d667e6
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: 528c2b040136518f9c7d04d8572cd0f08bb68385
+ms.sourcegitcommit: d5d3dd8b91e93d46653f9512bceafd8b5340255f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413345"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443760"
 ---
 # <a name="get-started-using-visual-studio-code-with-windows-subsystem-for-linux"></a>Приступая к работе с Visual Studio Code с подсистемой Windows для Linux
 
-Visual Studio Code, вместе с расширением Remote-WSL, позволяет использовать WSL в качестве среды разработки для полной времени непосредственно из VS Code. Можно сделать следующее.
+Visual Studio Code, вместе с расширением Remote-WSL, позволяет использовать WSL в качестве среды разработки для полной времени непосредственно из VS Code. Вы можете выполнить следующие действия:
 
 * Разработка в среде под управлением Linux
 * Использование цепочек инструментов и служебных программ для Linux
@@ -62,7 +62,7 @@ sudo apt-get install wget ca-certificates
 
 ### <a name="from-vs-code"></a>Из VS Code
 
-Кроме того, можно получить доступ к дополнительным VS Code удаленным параметрам с помощью ярлыка: `CTRL+SHIFT+P` в VS Code, чтобы открыть палитру команд. Если затем ввести, `VSCODE-REMOTE` вы увидите все доступные VS Code удаленные параметры, что позволит повторно открыть папку в удаленном сеансе, указать, какое распространение следует открыть в, и многое другое.
+Кроме того, можно получить доступ к дополнительным VS Code удаленным параметрам с помощью ярлыка: `CTRL+SHIFT+P` в VS Code, чтобы открыть палитру команд. Если затем ввести, `Remote-WSL` вы увидите список доступных VS Code удаленных параметров, что позволит повторно открыть папку в удаленном сеансе, указать, какое распространение следует открыть в, и многое другое.
 
 ![Палитра команд VS Code](../media/vscode-remote-command-palette.png)
 
