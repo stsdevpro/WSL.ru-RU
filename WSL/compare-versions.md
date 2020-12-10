@@ -5,13 +5,13 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubunt
 ms.date: 09/28/2020
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.custom: contperfq1
-ms.openlocfilehash: be0cd21b65705e455f29bfd1666ce74078a21baa
-ms.sourcegitcommit: cfb6c254322b8eb9c2c26e19ce970d4c046bc352
+ms.custom: contperf-fy21q1
+ms.openlocfilehash: ff2c9bc08b4fdfe8862f7d65fc5861fa242efef7
+ms.sourcegitcommit: c92245ab2b763d6a357210a9b4470a0cafd786a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035740"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96857601"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Сравнение WSL 1 и WSL 2
 
