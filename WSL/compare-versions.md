@@ -6,12 +6,12 @@ ms.date: 09/28/2020
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: ff2c9bc08b4fdfe8862f7d65fc5861fa242efef7
-ms.sourcegitcommit: c92245ab2b763d6a357210a9b4470a0cafd786a6
+ms.openlocfilehash: 2de208a42d557aa3eca86aae2a86200611ce48bc
+ms.sourcegitcommit: f5b14630947ee9cf3438e9ba502bfbe85ed72cd1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96857601"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97957685"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Сравнение WSL 1 и WSL 2
 
@@ -65,8 +65,8 @@ WSL 2 использует последнюю и самую новую техн
 
 WSL 2 — это основная модернизированная версия базовой архитектуры, которая использует технологию виртуализации и ядро Linux для реализации новых возможностей. Основные приоритеты этого обновления — увеличение производительности файловой системы и добавление полной совместимости системных вызовов.
 
-- [Системные требования WSL 2](./install-win10.md#step-2---update-to-wsl-2)
-- [Обновление от WSL 1 до WSL 2](./install-win10.md#step-2---update-to-wsl-2)
+- [Системные требования WSL 2](./install-win10.md#step-2--check-requirements-for-running-wsl-2)
+- [Обновление от WSL 1 до WSL 2](./install-win10.md#set-your-distribution-version-to-wsl-1-or-wsl-2)
 - [Часто задаваемые вопросы о WSL 2](./wsl2-faq.md)
 
 ### <a name="wsl-2-architecture"></a>Архитектура WSL 2
