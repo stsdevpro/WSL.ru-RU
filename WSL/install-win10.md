@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, подсистема windows для
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f5cf426ee50bde3c21929add0682e17b707288f9
-ms.sourcegitcommit: 52eb0d4f669954a61e199f9222062d2a519378f5
+ms.openlocfilehash: cbfd1f1aab99bc1965e569c4e818bd1663aa2878
+ms.sourcegitcommit: f5b14630947ee9cf3438e9ba502bfbe85ed72cd1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96760872"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97957695"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Руководство по установке подсистемы Windows для Linux в Windows 10
 
@@ -72,11 +72,9 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 
 Теперь перейдите к шагу 2 и выполните обновление до WSL 2. Если вы хотите установить только WSL 1, вы можете **перезагрузить** компьютер и перейти к разделу [Шаг 6. Установка дистрибутива Linux по выбору](./install-win10.md#step-6---install-your-linux-distribution-of-choice). Чтобы выполнить обновление до WSL 2, **дождитесь перезагрузки** компьютера и перейдите к следующему шагу.
 
-## <a name="step-2---update-to-wsl-2"></a>Шаг 2. Обновление до WSL 2
+## <a name="step-2---check-requirements-for-running-wsl-2"></a>Шаг 2. Проверка требований для запуска WSL 2
 
 Для обновления до WSL 2 требуется Windows 10.
-
-### <a name="requirements"></a>Требования
 
 - Для 64-разрядных систем: **версия 1903** или более поздняя со **сборкой 18362** или более поздней версии.
 - Для систем ARM64: **версия 2004** или более поздняя со **сборкой 19041** или более поздней версии.
@@ -121,13 +119,6 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 ```powershell
 wsl --set-default-version 2
 ```
-
-> [!NOTE]
-> Обновление с WSL 1 до WSL 2 может занять несколько минут в зависимости от размера целевого дистрибутива. Если вы используете устаревшую установку WSL 1 из Юбилейного обновления Windows 10 или обновления Creators Update, может возникнуть ошибка обновления. Выполните эти инструкции, чтобы [удалить устаревшие дистрибутивы](./install-legacy.md#uninstallingremoving-the-legacy-distro).
->
-> Если `wsl --set-default-version` выполняется как недопустимая команда, введите `wsl --help`. Если `--set-default-version` нет в списке, это указывает на отсутствие поддержки в ОС. Вам нужно выполнить обновление до версии 1903, сборки 18362 или выше.
->
-> После выполнения команды может появиться следующее сообщение: `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`. Это значит, что вам по-прежнему нужно установить пакет обновления MSI для ядра Linux.
 
 ## <a name="step-6---install-your-linux-distribution-of-choice"></a>Шаг 6. Установка дистрибутива Linux по выбору
 
@@ -185,6 +176,13 @@ wsl --set-version <distribution name> <versionNumber>
 ```
 
 Не забудьте заменить `<distribution name>` на фактическое имя дистрибутива и `<versionNumber>` с номером "1" или "2". Вы можете всегда вернуться к WSL версии 1, выполнив эту команду и заменив "2" на "1".
+
+> [!NOTE]
+> Обновление с WSL 1 до WSL 2 может занять несколько минут в зависимости от размера целевого дистрибутива. Если вы используете устаревшую установку WSL 1 из Юбилейного обновления Windows 10 или обновления Creators Update, может возникнуть ошибка обновления. Выполните эти инструкции, чтобы [удалить устаревшие дистрибутивы](./install-legacy.md#uninstallingremoving-the-legacy-distro).
+>
+> Если `wsl --set-default-version` выполняется как недопустимая команда, введите `wsl --help`. Если `--set-default-version` нет в списке, это указывает на отсутствие поддержки в ОС. Вам нужно выполнить обновление до версии 1903, сборки 18362 или выше.
+>
+> После выполнения команды может появиться следующее сообщение: `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`. Это значит, что вам по-прежнему нужно установить пакет обновления MSI для ядра Linux.
 
 Кроме того, если вы хотите сделать WSL 2 архитектурой по умолчанию, выполните следующую команду:
 
