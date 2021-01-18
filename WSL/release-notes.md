@@ -6,14 +6,22 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: c772185501b009369d7d47752dc792b8f90b482d
-ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
+ms.openlocfilehash: c158cffde1c6f680f833b9f7e84f2d494ba64b78
+ms.sourcegitcommit: e2d586925b314ce4517773b9c78736450a9f75d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92211748"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97977129"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Заметки о выпуске подсистемы Windows для Linux
+
+## <a name="build-21286"></a>Сборка 21286
+Общие сведения о сборке Windows 21286 доступны в [блоге о Windows](https://blogs.windows.com/windows-insider/2021/01/06/announcing-windows-10-insider-preview-build-21286/).
+
+* В etc/wsl.conf добавлен параметр boot.command для включения команд запуска.
+* Введена команда wsl.exe --cd для указания текущего рабочего каталога команды.
+* Улучшено сопоставление кодов ошибок NTSTATUS и Linux. [GH 6063]
+* Улучшены отчеты об ошибках при выполнении команды wsl.exe --mount.
 
 ## <a name="build-20226"></a>Сборка 20226.
 Общие сведения о сборке Windows 20226 доступны в [блоге о Windows](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20226/).
