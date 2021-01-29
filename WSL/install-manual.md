@@ -5,12 +5,12 @@ keywords: wsl, подсистема windows для linux, установка в�
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b94c7eb2f9e70a79f47853dac44badde58667315
-ms.sourcegitcommit: f5b14630947ee9cf3438e9ba502bfbe85ed72cd1
+ms.openlocfilehash: 8f6cb0714d5a688f40690ba68b58b642bab765c2
+ms.sourcegitcommit: fe75d8d799434fb4ff05532baa7906cd6b625bda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97957665"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811332"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Скачивание пакетов дистрибутива подсистемы Windows для Linux вручную
 
@@ -69,6 +69,6 @@ curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 Add-AppxPackage .\app_name.appx
 ```
 
-Если вы используете сервер Windows, инструкции по установке можно найти на странице документации [Windows Server](install-on-server.md).
+Если вы используете Windows Server или у вас возникли проблемы с выполнением приведенной выше команды, можно найти альтернативные инструкции по установке на странице документации [Windows Server](install-on-server.md), чтобы установить файл `.appx`, изменив его на ZIP-файл.
 
 После установки дистрибутива следуйте обычным инструкциям по * [обновлению WSL 1 до WSL 2](./install-win10.md#set-your-distribution-version-to-wsl-1-or-wsl-2) или [создайте новую учетную запись пользователя и пароль](./user-support.md).
