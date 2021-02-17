@@ -5,12 +5,12 @@ keywords: WSL, Windows, виндовссубсистем, GNU, Linux, bash, ди
 ms.date: 11/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 165ae828b7fe83cae70a477d6143999da4265e3f
-ms.sourcegitcommit: 8b22f057a2f39c86bbede43fd65e8001c99548da
+ms.openlocfilehash: 8c6fb5e2a4996f5ec59ac72ac08fb9408e117321
+ms.sourcegitcommit: 17d5ea1fe571274c224202544f61035971d6e0e1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870545"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100551004"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>Начало работы с подключением диска Linux в WSL 2 (Предварительная версия)
 
@@ -138,7 +138,7 @@ wsl --mount <Diskpath> -p <PartitionIndex>
 wsl --mount <DiskPath> -o <MountOptions>
 ```
 
-Пример.
+Пример
 
 ```powershell
 wsl --mount <DiskPath> -o "data=ordered"
@@ -172,7 +172,7 @@ wsl --unmount [DiskPath]
 
 ## <a name="mount-a-vhd-in-wsl"></a>Подключение виртуального жесткого диска в WSL
 
-Вы также можете подключить файлы виртуального жесткого диска (VHD) к WSL с помощью `wsl --mount` . Для этого сначала необходимо подключить виртуальный жесткий диск к Windows с помощью [`Mount-VHD`](https://docs.microsoft.com/powershell/module/hyper-v/mount-vhd) команды в Windows. Не забудьте выполнить эту команду в окне с правами администратора. Ниже приведен пример, в котором мы используем эту команду, а также выводится путь к диску. Обязательно замените `<pathToVHD>` фактический путь VHD. 
+Вы также можете подключить файлы виртуального жесткого диска (VHD) к WSL с помощью `wsl --mount` . Для этого сначала необходимо подключить виртуальный жесткий диск к Windows с помощью [`Mount-VHD`](/powershell/module/hyper-v/mount-vhd) команды в Windows. Не забудьте выполнить эту команду в окне с правами администратора. Ниже приведен пример, в котором мы используем эту команду, а также выводится путь к диску. Обязательно замените `<pathToVHD>` фактический путь VHD. 
 
 ```powershell
 Write-Output "\\.\PhysicalDrive$((Mount-VHD -Path <pathToVHD> -PassThru | Get-Disk).Number)"
@@ -186,6 +186,6 @@ Write-Output "\\.\PhysicalDrive$((Mount-VHD -Path <pathToVHD> -PassThru | Get-Di
 
 - В настоящее время к WSL 2 можно подключить только целые диски. Это означает, что невозможно присоединить только один раздел. В частности, это означает, что невозможно использовать `wsl --mount` для чтения раздела на устройстве загрузки, так как это устройство не может быть отсоединено от Windows.
 
-- Устройства USB Flash не поддерживаются в настоящее время и не подключаются к WSL 2. Хотя диски USB поддерживаются.
+- Флэш-накопители USB и SD-карты в настоящее время не поддерживаются и не могут быть подключены к WSL 2. Хотя диски USB поддерживаются.
 
 - Только системные системы, которые изначально поддерживаются в ядре, могут быть подключены `wsl --mount` . Это означает, что невозможно использовать установленные драйверы FileSystem (например, NTFS-3G), вызвав `wsl --mount` .
